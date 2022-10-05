@@ -9,7 +9,6 @@ const Home: NextPage = () => {
         <meta name="description" content="Apple Shop" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-
       <main>Main</main>
     </div>
   );
