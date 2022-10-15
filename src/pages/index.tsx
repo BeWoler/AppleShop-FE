@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Apple Shop</title>
         <meta name="description" content="Apple Shop" />
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         />
       </Head>
       <main>Main</main>
-    </div>
+    </>
   );
 };
 
