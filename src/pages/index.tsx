@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Banner from '@/components/common/banner/Banner';
 
 const Home: NextPage = () => {
   return (
@@ -26,7 +27,9 @@ const Home: NextPage = () => {
           href="/favicon-16x16.png"
         />
       </Head>
-      <main>Main</main>
+      <main>
+        <Banner/>
+      </main>
     </>
   );
 };
