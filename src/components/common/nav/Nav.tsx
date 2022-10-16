@@ -6,7 +6,7 @@ const navData = [
   { id: 1, title: 'О продукции', href: '' },
   { id: 2, title: 'Каталог', href: '' },
   { id: 3, title: 'Акции', href: '' },
-  { id: 4, title: 'Доставка&Оплата', href: '' },
+  { id: 4, title: 'Доставка & Оплата', href: '' },
 ];
 
 const Nav: FC = (): JSX.Element => {
