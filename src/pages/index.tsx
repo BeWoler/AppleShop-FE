@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Banner from '@/components/common/banner/Banner';
 import Benefits from '@/components/common/benefits/Benefits';
 import Delivery from '@/components/common/delivery/Delivery';
+import Discounts from '@/components/common/discounts/Discounts';
 
 const Home: NextPage = () => {
   return (
@@ -32,6 +33,7 @@ const Home: NextPage = () => {
       <main>
         <Banner/>
         <Benefits/>
+        <Discounts/>
         <Delivery/>
       </main>
     </>
