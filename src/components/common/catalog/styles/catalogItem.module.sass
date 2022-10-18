@@ -1,0 +1,55 @@
+@import ../../../../../public/assets/styles/variables/fonts
+
+.catalog__item
+  max-width: 420px
+  width: 100%
+  display: flex
+  flex-direction: column
+
+.catalog__item__wrap
+  position: relative
+  width: 420px
+  height: 420px
+  margin-bottom: 30px
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%)
+  border: 1px solid #FFFFFF
+
+.catalog__item__title
+  font-family: $georgia
+  font-weight: 700
+  font-size: 28px
+  line-height: 32px
+  margin: 0 auto 35px auto
+  text-align: center
+
+.catalog__item__price
+  align-self: flex-end
+  margin: auto auto 35px auto
+
+.catalog__btns_wrap
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: 0 auto
+
+
+.catalog__item__btn
+  min-width: 210px
+  width: 100%
+  font-weight: 500
+  font-size: 22px
+  line-height: 22px
+  padding: 20px
+  border: 1px solid #FFFFFF
+  background-color: transparent
+  color: #fff
+  &:first-child
+    border-top-left-radius: 20px
+    border-bottom-left-radius: 20px
+  &:last-child
+    border-top-right-radius: 20px
+    border-bottom-right-radius: 20px
+  &:hover
+    background-color: #fff
+    color: #200039
+    transition: all 0.3s linear
