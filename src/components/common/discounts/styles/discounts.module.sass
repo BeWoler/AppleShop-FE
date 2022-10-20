@@ -1,0 +1,90 @@
+@import ../../../../../public/assets/styles/variables/fonts
+
+.discounts
+  background-color: #520092
+  position: relative
+  z-index: 1
+  &::after
+    content: ""
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background-color: #000
+    opacity: 90%
+    z-index: 3
+
+.discounts__container
+  padding: 75px 20px
+  position: relative
+  &:nth-child(2n + 1) .discounts__watches__underwrap
+    display: none
+  &:nth-child(2n) .discounts__airpods3__underwrap
+    display: none
+  &:nth-child(2n) .discounts__airpodsPro__underwrap
+    display: none
+
+.discounts__airpods3__underwrap
+  position: absolute
+  left: 70px
+  bottom: 0
+  z-index: 2
+
+.discounts__airpodsPro__underwrap
+  position: absolute
+  top: 30px
+  right: 200px
+  z-index: 2
+
+.discounts__watches__underwrap
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  top: 17%
+  z-index: 2
+
+.discounts__airpods3__wrap
+  position: relative
+  height: 150px
+  width: 529px
+
+.discounts__airpodsPro__wrap
+  position: relative
+  height: 209px
+  width: 277px
+
+.discounts__watches__wrap
+  position: relative
+  height: 199px
+  width: 1755px
+
+.discounts__content
+  position: relative
+  color: #fff
+  text-align: center
+  max-width: 600px
+  width: 100%
+  margin: 0 auto
+  z-index: 4
+
+.discounts__content__date
+  font-weight: 500
+  font-size: 22px
+  line-height: 27px
+  position: relative
+  margin-bottom: 35px
+  &::after
+    content: ""
+    display: block
+    position: absolute
+    height: 1px
+    width: 100%
+    background-color: #fff
+    top: 37px
+
+.discounts__content__text
+  font-weight: 500
+  font-size: 28px
+  line-height: 34px
