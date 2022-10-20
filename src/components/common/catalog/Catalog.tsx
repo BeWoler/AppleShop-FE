@@ -31,7 +31,7 @@ const Catalog: FC = (): JSX.Element => {
       },
       description:
         'Умные подсказки про физическую активность. Усовершенствованное приложение «Пульс». Любимые плейлисты прямо на запястье. Встроенный высотомер. И более мощный процессор.',
-      price: '1050р.',
+      price: 1050,
     },
     {
       id: 2,
@@ -60,7 +60,7 @@ const Catalog: FC = (): JSX.Element => {
       },
       description:
         'Умные подсказки про физическую активность. Усовершенствованное приложение «Пульс». Любимые плейлисты прямо на запястье. Встроенный высотомер. И более мощный процессор.',
-      price: '1050р.',
+      price: 1050,
     },
     {
       id: 3,
@@ -89,7 +89,7 @@ const Catalog: FC = (): JSX.Element => {
       },
       description:
         'Умные подсказки про физическую активность. Усовершенствованное приложение «Пульс». Любимые плейлисты прямо на запястье. Встроенный высотомер. И более мощный процессор.',
-      price: '1050р.',
+      price: 1050,
     },
     {
       id: 4,
@@ -98,10 +98,12 @@ const Catalog: FC = (): JSX.Element => {
         {
           imgLink: '/assets/imgs/PodWatch7.png',
           imgColor: '#000',
+          colorName: 'Черный',
         },
         {
           imgLink: '/assets/imgs/PodWatch7.png',
           imgColor: '#BF1010',
+          colorName: 'Черный',
         },
       ],
       features: {
@@ -120,7 +122,7 @@ const Catalog: FC = (): JSX.Element => {
       },
       description:
         'Умные подсказки про физическую активность. Усовершенствованное приложение «Пульс». Любимые плейлисты прямо на запястье. Встроенный высотомер. И более мощный процессор.',
-      price: '1050р.',
+      price: 1050,
     },
     {
       id: 5,
@@ -129,10 +131,12 @@ const Catalog: FC = (): JSX.Element => {
         {
           imgLink: '/assets/imgs/PodWatchSE.png',
           imgColor: '#000',
+          colorName: 'Черный',
         },
         {
           imgLink: '/assets/imgs/PodWatchSE.png',
           imgColor: '#BF1010',
+          colorName: 'Черный',
         },
       ],
       features: {
@@ -151,7 +155,7 @@ const Catalog: FC = (): JSX.Element => {
       },
       description:
         'Умные подсказки про физическую активность. Усовершенствованное приложение «Пульс». Любимые плейлисты прямо на запястье. Встроенный высотомер. И более мощный процессор.',
-      price: '1050р.',
+      price: 1050,
     },
     {
       id: 6,
@@ -160,10 +164,12 @@ const Catalog: FC = (): JSX.Element => {
         {
           imgLink: '/assets/imgs/PodWhatch3.png',
           imgColor: '#000',
+          colorName: 'Черный',
         },
         {
           imgLink: '/assets/imgs/PodWhatch3.png',
           imgColor: '#BF1010',
+          colorName: 'Черный',
         },
       ],
       features: {
@@ -182,7 +188,7 @@ const Catalog: FC = (): JSX.Element => {
       },
       description:
         'Умные подсказки про физическую активность. Усовершенствованное приложение «Пульс». Любимые плейлисты прямо на запястье. Встроенный высотомер. И более мощный процессор.',
-      price: '1050р.',
+      price: 1050,
     },
   ];
 
