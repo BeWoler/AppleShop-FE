@@ -15,9 +15,9 @@ const Nav: FC = (): JSX.Element => {
       <ul className={styles.nav__menu}>
         {navData?.map((item) => {
           return (
-            <li key={item.id} className={styles.nav__menu__item}>
+            <li  key={item.id} className={styles.nav__menu__item}>
               <Link href={item.href}>
-                <a title={item.title}>{item.title}</a>
+                <a className={styles.nav__menu__link} title={item.title}>{item.title}</a>
               </Link>
             </li>
           );
