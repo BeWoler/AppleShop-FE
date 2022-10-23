@@ -4,6 +4,7 @@ import styles from './styles/footer.module.sass';
 const Footer: FC = (): JSX.Element => {
   return (
     <footer className={styles.footer}>
+      <div className={styles.footer__container}>
       <p className={styles.footer__info}>
         ИП Лазарчик Евгений Владимирович, Республика Беларусь, г. Петриков, ул.
         Мира, 22-27 Зарегистрирован Крупским РИК 15.02.2019, 690793068.
@@ -45,6 +46,7 @@ const Footer: FC = (): JSX.Element => {
           strokeLinejoin="round"
         />
       </svg>
+      </div>
     </footer>
   );
 };

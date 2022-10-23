@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { FC } from 'react';
-import BenefitVideo from './BenefitVideo';
 import styles from './styles/benefits.module.sass';
 
 const benefitsData = [
@@ -33,7 +32,15 @@ const benefitsData = [
 const Benefits: FC = (): JSX.Element => {
   return (
     <div className={styles.benefits__box}>
-      <BenefitVideo url="https://youtu.be/QqgCmjiUwxM" />
+      <div className={styles.benefits__img__overflow}>
+        <div className={styles.benefits__img_wrap}>
+          <Image
+          src="/assets/imgs/benefits.png"
+          alt="appleWatch"
+          layout='fill'
+          />
+        </div>
+      </div>
       <div className={styles.benefits__items}>
         <ul className={styles.benefits__list}>
           {benefitsData?.map((item) => {

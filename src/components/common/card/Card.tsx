@@ -52,15 +52,15 @@ const Card: FC = (): JSX.Element => {
         </div>
         <div className={styles.card__right}>
           <div className={styles.card__info_item}>
-            <h2 className={styles.card__subtitle}>Цвета</h2>
+            <h2 className={styles.card__subtitle}>Цвет</h2>
             <div className={styles.card__color_list}>
               {productData.colors.map((item) => {
                 return (
-                  <div
+                  <button
                     key={item.color}
                     className={styles.card__color_item}
                     style={{ backgroundColor: item.color }}
-                  ></div>
+                  ></button>
                 );
               })}
             </div>
