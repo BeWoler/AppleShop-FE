@@ -19,24 +19,47 @@
 .discounts__container
   padding: 75px 20px
   position: relative
+  overflow: hidden
   &:nth-child(2n + 1) .discounts__watches__underwrap
     display: none
   &:nth-child(2n) .discounts__airpods3__underwrap
     display: none
   &:nth-child(2n) .discounts__airpodsPro__underwrap
     display: none
+  @media (max-width: 650px ) 
+    padding: 55px 20px
+  @media (max-width: 500px ) 
+    padding: 40px 30px
 
 .discounts__airpods3__underwrap
   position: absolute
   left: 70px
   bottom: 0
   z-index: 2
+  @media (max-width: 1170px ) 
+    left: 30px
+  @media (max-width: 900px ) 
+    left: -10px
+  @media (max-width: 650px ) 
+    display: none
 
 .discounts__airpodsPro__underwrap
   position: absolute
   top: 30px
   right: 200px
   z-index: 2
+  @media (max-width: 1170px ) 
+    right: 100px
+  @media (max-width: 900px ) 
+    right: 10px
+  @media (max-width: 650px ) 
+    right: 200px
+  @media (max-width: 550px ) 
+    right: 150px
+  @media (max-width: 500px ) 
+    right: 100px
+  @media (max-width: 400px ) 
+    right: 30px
 
 .discounts__watches__underwrap
   position: absolute
@@ -56,6 +79,7 @@
   position: relative
   height: 209px
   width: 277px
+
 
 .discounts__watches__wrap
   position: relative
@@ -90,3 +114,9 @@
   font-weight: 500
   font-size: 26px
   line-height: 34px
+  @media (max-width: 900px ) 
+    font-size: 22px
+    line-height: 28px
+  @media (max-width: 450px ) 
+    font-size: 20px
+    line-height: 24px
