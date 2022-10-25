@@ -7,6 +7,7 @@ import Discounts from '@/components/common/discounts/Discounts';
 import Catalog from '@/components/common/catalog/Catalog';
 import Basket from '@/components/common/basket/Basket';
 import Card from '@/components/common/card/Card';
+import MobileNav from '@/components/common/mobileNav/MobileNav';
 
 const Home: NextPage = () => {
   return (
@@ -35,6 +36,7 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <Banner/>
+        <MobileNav/>
         <Benefits/>
         <Catalog/>
         <Discounts/>

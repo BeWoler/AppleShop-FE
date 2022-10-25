@@ -12,12 +12,16 @@ const Banner: FC = (): JSX.Element => {
           <span className={styles.banner__subtitle}>Лучшее качеcтво по честной цене!</span>
         </div>
         <div className={styles.banner__airpods_wrap}>
-          <Image className={styles.banner__airpods__img} src='/assets/imgs/airpodsBannerDeck.png' alt='airpods pro' layout="fill"/>
+          <div className={styles.relative}>
+            <Image className={styles.banner__airpods__img} src='/assets/imgs/airpodsBannerDeck.png' alt='airpods pro' layout="fill"/>
+          </div>
         </div>
       </div>
-      <div className={styles.banner__watches_wrap}>
-        <Image className={styles.banner__watches__img} src='/assets/imgs/watchesBannerDeck.png' alt='watches' layout="fill"/>
-      </div>
+        <div className={styles.banner__watches_wrap}>
+          <div className={styles.relative}>
+            <Image className={styles.banner__watches__img} src='/assets/imgs/watchesBannerDeck.png' alt='watches' layout="fill"/>
+          </div>
+        </div>
     </div>
   </div>;
 };

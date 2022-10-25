@@ -5,14 +5,16 @@
   padding: 120px 20px 140px 20px
   color: #fff
   text-align: center
+  @media (max-width: 1700px ) 
+    padding: 120px 50px 140px 
 
 .catalog__selections
   margin: 0 auto 95px auto
+  max-width: 1440px
 
 .catalog__selection_btn
-  max-width: 480px
-  width: 100%
-  padding: 15px 100px
+  width: calc( 100% / 3  )
+  padding: 15px 30px
   border: 1.5px solid #FFFFFF
   background-color: transparent
   font-weight: 500
@@ -29,6 +31,9 @@
     background-color: #fff
     color: #200039
     transition: all 0.3s linear
+  @media (max-width: 1700px ) 
+    font-size: 18px
+    line-height: 22px
 
 .catalog__list
   max-width: 1200px
