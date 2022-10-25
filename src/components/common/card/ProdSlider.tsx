@@ -18,12 +18,7 @@ const ProdSlider: FC<ISlider> = (props: ISlider): JSX.Element => {
         return (
           <SwiperSlide key={item}>
             <div className={styles.img_wrap}>
-            <Image
-              src={item}
-              alt={props.title}
-              width={400}
-              height={400}
-            />
+              <Image src={item} alt={props.title} width={400} height={400} />
             </div>
           </SwiperSlide>
         );
