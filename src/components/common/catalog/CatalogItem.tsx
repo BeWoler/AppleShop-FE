@@ -7,7 +7,7 @@ const CatalogItem: FC<ICatalogItemProps> = (props: ICatalogItemProps): JSX.Eleme
 
   return <div className={styles.catalog__item}>
         <div className={styles.catalog__item__wrap}>
-          <Image className={styles.catalog__item__photo} src='/assets/imgs/PodAirpods2.png' alt={props.title} layout="fill"/>
+          <Image className={styles.catalog__item__photo} src='/assets/imgs/PodAirpods2.png' alt={props.title} key={props.key} layout="fill"/>
         </div>
         <h2  className={styles.catalog__item__title}>{props.title}</h2>
         <p  className={styles.catalog__item__price}>{props.price} руб</p>

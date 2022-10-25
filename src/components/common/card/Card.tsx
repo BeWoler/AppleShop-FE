@@ -16,10 +16,12 @@ const Card: FC = (): JSX.Element => {
       {
         color: '#000',
         colorName: 'Черный',
+        id: 1,
       },
       {
         color: '#BF1010',
         colorName: 'Черный',
+        id: 2,
       },
     ],
     features: {
@@ -57,7 +59,7 @@ const Card: FC = (): JSX.Element => {
               {productData.colors.map((item) => {
                 return (
                   <button
-                    key={item.color}
+                    key={item.id}
                     className={styles.card__color_item}
                     style={{ backgroundColor: item.color }}
                   ></button>
@@ -71,18 +73,18 @@ const Card: FC = (): JSX.Element => {
             className={ moreChar? `${styles.card__chars} ${styles.hidden__chars}` :  `${styles.card__chars} `}
             >
               <div className={styles.card__chars__keys}>
-              {productData.features.keys.map((item) => {
+              {productData.features.keys.map((item, i) => {
                 return (
-                  <p className={styles.card__chars__key} key={item}>
+                  <p className={styles.card__chars__key} key={i}>
                     {item}
                   </p>
                 );
               })}
               </div>
               <div className={styles.card__chars__values}>
-              {productData.features.values.map((item) => {
+              {productData.features.values.map((item, i) => {
                 return (
-                  <p className={styles.card__chars__value} key={item}>
+                  <p className={styles.card__chars__value} key={i}>
                     {item}
                   </p>
                 );
