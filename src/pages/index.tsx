@@ -36,7 +36,6 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <Banner/>
-        <MobileNav/>
         <Benefits/>
         <Catalog/>
         <Discounts/>

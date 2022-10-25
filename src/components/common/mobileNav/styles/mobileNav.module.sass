@@ -2,6 +2,8 @@
 
 .nav
   display: none
+  opacity: 0
+  transition: all ease .3s
   @media (max-width: 1170px)
     display: block
     position: absolute
@@ -15,6 +17,11 @@
     width: 100%
   @media (max-width: 480px)
     padding: 120px 40px 50px 50px
+
+.active
+  animation: visible .3s ease-in-out forwards
+.inactive
+  animation: hidden .3s ease-in-out forwards
 
 .nav__title
   font-family: $georgia
@@ -62,4 +69,16 @@
   position: relative
   width: 60px
   height: 60px
-  
+
+@keyframes visible
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes hidden
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+    z-index: -10
