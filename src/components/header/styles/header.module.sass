@@ -7,21 +7,46 @@
   width: 100%
   
 .header__container
+  position: relative
   padding: 20px 140px
   display: flex
   align-items: center
   justify-content: space-between
+  @media (max-width: 1770px )
+    padding: 20px 100px
+  @media (max-width: 1550px )
+    padding: 20px 70px
 
 .header__logo 
-  width: 60px
-  height: 60px
+  width: 50px
+  height: 50px
+  position: relative
 
 .header__container_svg
   display: flex
   column-gap: 100px
   align-items: center
+  @media (max-width: 1440px )
+    column-gap: 50px
 
-.header__inst, .header__cart
+.header__inst
+  position: relative
   width: 50px
   height: 50px
   cursor: pointer
+  @media (max-width: 900px )
+    display: none
+
+.header__cart
+  position: relative
+  width: 50px
+  height: 50px
+  cursor: pointer
+
+.header__icom_menu
+  position: relative
+  width: 46px
+  height: 30px
+  display: none
+  @media (max-width: 1170px )
+    display: block

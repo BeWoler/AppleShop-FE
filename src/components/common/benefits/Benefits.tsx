@@ -46,7 +46,9 @@ const Benefits: FC = (): JSX.Element => {
           {benefitsData?.map((item) => {
             return (
               <li key={item.id}>
-                <Image src={item.icon} width="60" height="60" alt={item.icon} />
+                <div className={styles.benefits__svg}>
+                  <Image src={item.icon} layout='fill' alt={item.icon} />
+                </div>
                 <div>
                   <h2>{item.title}</h2>
                   <p>{item.text}</p>
