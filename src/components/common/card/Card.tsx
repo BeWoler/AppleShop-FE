@@ -4,7 +4,6 @@ import ProdSlider from './ProdSlider';
 import { useState } from 'react';
 
 const Card: FC = (): JSX.Element => {
-
   const [moreChar, setMoreChar] = useState(true);
   const [moreDesc, setMoreDesc] = useState(true);
 
@@ -35,7 +34,16 @@ const Card: FC = (): JSX.Element => {
         'Размер',
         'Способ отображения времени',
       ],
-      values: ['алюминий', 'да', '42мм', 'цифровой', 'алюминий', 'да', '42мм', 'цифровой'],
+      values: [
+        'алюминий',
+        'да',
+        '42мм',
+        'цифровой',
+        'алюминий',
+        'да',
+        '42мм',
+        'цифровой',
+      ],
     },
     description:
       'Умные подсказки про физическую активность. И более мощный процессор.  И более мощный процессор. Умные подсказки про физическую активность. Усовершенствованное приложение «Пульс». Встроенный высотомер. И более мощный процессор. Умные подсказки про физическую активность. Усовершенствованное приложение «Пульс». Встроенный высотомер. И более мощный процессор. Умные подсказки про физическую активность. Усовершенствованное приложение «Пульс». Встроенный высотомер. Умные подсказки про физическую активность. Усовершенствованное приложение «Пульс». Встроенный высотомер.',
@@ -47,62 +55,87 @@ const Card: FC = (): JSX.Element => {
       <div className={styles.card__container}>
         <h1 className={styles.card__title}>{productData.title}</h1>
         <div className={styles.card__content_container}>
-        <div className={styles.card__left}>
-          <div style={{maxWidth: "600px"}}>
-            <ProdSlider photos={productData.photos} title={productData.title} />
-          </div>
-        </div>
-        <div className={styles.card__right}>
-          <div className={styles.card__info_item}>
-            <h2 className={styles.card__subtitle}>Цвет</h2>
-            <div className={styles.card__color_list}>
-              {productData.colors.map((item) => {
-                return (
-                  <button
-                    key={item.id}
-                    className={styles.card__color_item}
-                    style={{ backgroundColor: item.color }}
-                  ></button>
-                );
-              })}
+          <div className={styles.card__left}>
+            <div className={styles.card__slide}>
+              <ProdSlider
+                photos={productData.photos}
+                title={productData.title}
+              />
             </div>
           </div>
-          <div className={styles.card__info_item}>
-            <h2 className={styles.card__subtitle}>Основные характеристики:</h2>
-            <div 
-            className={ moreChar? `${styles.card__chars} ${styles.hidden__chars}` :  `${styles.card__chars} `}
-            >
-              <div className={styles.card__chars__keys}>
-              {productData.features.keys.map((item, i) => {
-                return (
-                  <p className={styles.card__chars__key} key={i}>
-                    {item}
-                  </p>
-                );
-              })}
-              </div>
-              <div className={styles.card__chars__values}>
-              {productData.features.values.map((item, i) => {
-                return (
-                  <p className={styles.card__chars__value} key={i}>
-                    {item}
-                  </p>
-                );
-              })}
+          <div className={styles.card__right}>
+            <div className={`${styles.card__info_item} ${styles.colorBox}`}>
+              <h2 className={`${styles.card__subtitle} ${styles.colorTitle}`}>
+                Цвет
+              </h2>
+              <div className={styles.card__color_list}>
+                {productData.colors.map((item) => {
+                  return (
+                    <button
+                      key={item.id}
+                      className={styles.card__color_item}
+                      style={{ backgroundColor: item.color }}
+                    ></button>
+                  );
+                })}
               </div>
             </div>
-            <button className={styles.card__more} onClick={() => setMoreChar(!moreChar)}>{moreChar? 'Ещё...' : 'Свернуть'}</button>
-          </div>
-          <div className={styles.card__info_item}>
-            <h2 className={styles.card__subtitle}>Описание:</h2>
-            <p className={moreDesc? `${styles.card__description} ${styles.hidden__desc}` : `${styles.card__description}`}>
-              {productData.description}
+            <p className={`${styles.card__price} ${styles.priceFirst}`}>
+              {productData.price} руб
             </p>
-            <button className={styles.card__more} onClick={() => setMoreDesc(!moreDesc)}>{moreDesc? 'Ещё...' : 'Свернуть'}</button>
+            <button className={`${styles.card__orderBtn} ${styles.orderBtn}`}>
+              Заказать
+            </button>
+            <div className={styles.card__info_item}>
+              <h2 className={styles.card__subtitle}>
+                Основные характеристики:
+              </h2>
+              <div
+                className={
+                  moreChar
+                    ? `${styles.card__chars} ${styles.hidden__chars}`
+                    : `${styles.card__chars} `
+                }
+              >
+                <div className={styles.card__chars__list}>
+                  {productData.features.keys.map((item, i) => {
+                    return (
+                      <div className={styles.card__chars__item} key={i}>
+                        <div className={styles.card__chars__key} >{item}</div>
+                        <div className={styles.card__chars__value}>{productData.features.values[i]}</div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+              <button
+                className={styles.card__more}
+                onClick={() => setMoreChar(!moreChar)}
+              >
+                {moreChar ? 'Ещё...' : 'Свернуть'}
+              </button>
+            </div>
+            <div className={styles.card__info_item}>
+              <h2 className={styles.card__subtitle}>Описание:</h2>
+              <p
+                className={
+                  moreDesc
+                    ? `${styles.card__description} ${styles.hidden__desc}`
+                    : `${styles.card__description}`
+                }
+              >
+                {productData.description}
+              </p>
+              <button
+                className={styles.card__more}
+                onClick={() => setMoreDesc(!moreDesc)}
+              >
+                {moreDesc ? 'Ещё...' : 'Свернуть'}
+              </button>
+            </div>
+            <p className={styles.card__price}>{productData.price} руб</p>
+            <button className={styles.card__orderBtn}>Заказать</button>
           </div>
-          <p className={styles.card__price}>{productData.price} руб</p>
-          <button className={styles.card__orderBtn}>Заказать</button>
-        </div>
         </div>
       </div>
     </div>

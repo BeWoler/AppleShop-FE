@@ -7,6 +7,15 @@
   justify-content: space-between
   padding: 15px 0
   margin-bottom: 50px
+  @media (max-width: 750px )
+    margin-bottom: 70px
+  @media (max-width: 700px )
+    flex-direction: column
+    align-items: flex-start
+    padding: 25px 0
+    row-gap: 35px
+  @media (max-width: 450px )
+    padding: 35px 0
 
 .basket__product__right
   display: flex
@@ -27,6 +36,10 @@
   border: none
   cursor: pointer
 
+.basket__product__right
+  margin-bottom: 0
+
+
 .basket__product__img
   position: relative
   width: 120px
@@ -34,32 +47,59 @@
   margin-right: 30px
   background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%)
   border: 1px solid #FFFFFF
+  @media (max-width: 450px )
+    width: 90px
+    height: 90px
+    margin-right: 10px
+  // @media (max-width: 375px )
+  //   width: 60px
+  //   height: 60px
 
 .basket__product__info
-  max-width: 285px
+  max-width: 250px
   width: 100%
   justify-self: left
+  @media (max-width: 450px )
+    max-width: 200px
+  @media (max-width: 375px )
+    max-width: 200px
 
 .basket__product__title
   font-weight: 700
-  font-size: 22px
+  font-size: 24px
   line-height: 27px
   margin-bottom: 15px
+  @media (max-width: 750px )
+    font-size: 22px
+    line-height: 26px
+  @media (max-width: 450px )
+    font-size: 20px
+    line-height: 24px
+    font-weight: 500
 
 .basket__product__color
   font-weight: 500
-  font-size: 14px
+  font-size: 16px
   line-height: 17px
+
+.counterAndPrice
+  display: flex
+  justify-content: space-between
+  width: 38%
+  @media (max-width: 700px )
+    width: 100%
 
 .basket__product__counter
   display: flex
   align-items: center
   justify-content: center
   column-gap: 15px
+  @media (max-width: 700px )
+    margin-left: 15px
 
 .basket__product__counter__btn
-  width: 15px
-  height: 15px
+  width: 25px
+  height: 25px
   position: relative
   background-color: transparent
   border: none
@@ -67,10 +107,22 @@
 
 .basket__product__counter__value
   font-weight: 700
-  font-size: 22px
+  font-size: 24px
   line-height: 27px
+  @media (max-width: 600px )
+    font-size: 22px
+    line-height: 26px
+
 
 .basket__product__price
   font-weight: 600
-  font-size: 22px
-  line-height: 27px
+  font-size: 28px
+  line-height: 30px
+  @media (max-width: 600px )
+    font-size: 24px
+    line-height: 26px
+  @media (max-width: 450px )
+    font-size: 22px
+    line-height: 24px
+
+

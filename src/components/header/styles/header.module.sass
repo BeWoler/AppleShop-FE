@@ -5,6 +5,8 @@
   position: fixed
   height: 100px
   width: 100%
+  @media (max-width: 1770px )
+    height: fit-content
   
 .header__container
   position: relative
@@ -16,11 +18,19 @@
     padding: 20px 100px
   @media (max-width: 1550px )
     padding: 20px 70px
+  @media (max-width: 900px )
+    padding: 15px 30px
+  @media (max-width: 600px )
+    padding: 15px 20px
 
 .header__logo 
   width: 50px
   height: 50px
   position: relative
+  cursor: pointer
+  @media (max-width: 600px )
+    width: 35px
+    height: 35px
 
 .header__container_svg
   display: flex
@@ -42,6 +52,9 @@
   width: 50px
   height: 50px
   cursor: pointer
+  @media (max-width: 600px )
+    width: 35px
+    height: 35px
 
 .header__icom_menu
   position: relative
@@ -50,3 +63,6 @@
   display: none
   @media (max-width: 1170px )
     display: block
+  @media (max-width: 600px )
+    width: 34.5px
+    height: 22.5px

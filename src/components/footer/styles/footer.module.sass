@@ -1,6 +1,14 @@
 .footer
   padding: 50px 100px 
   background-color: #000
+  @media (max-width: 1770px )
+    padding: 40px 40px 
+  @media (max-width: 1550px )
+    padding: 40px 70px 
+  @media (max-width: 900px )
+    padding: 40px 30px 
+  @media (max-width: 600px )
+    padding: 30px 30px 
 
 .footer__container
   display: flex
@@ -8,6 +16,11 @@
   column-gap: 150px
   align-items: center
   max-width: 1440px
+  @media (max-width: 1770px )
+    column-gap: 80px
+  @media (max-width: 600px )
+    flex-direction: column-reverse
+    row-gap: 50px
 
 .footer__info
   width: 700px
@@ -15,11 +28,25 @@
   font-size: 14px
   line-height: 20px
   color: #fff
+  @media (max-width: 1770px )
+    font-size: 12px
+    line-height: 16px
+    width: 500px
+  @media (max-width: 900px )
+    width: 50%
+  @media (max-width: 600px )
+    text-align: center
+    width: 80%
 
 .footer__inst
+  margin-top: 10px
+  position: relative
   width: 70px
   height: 70px
+  cursor: pointer
 
 .footer__logo
+  position: relative
   width: 60px
   height: 60px
+  cursor: pointer

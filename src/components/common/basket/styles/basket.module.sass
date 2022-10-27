@@ -4,11 +4,19 @@
   background-color: #200039
   max-width: 800px
   width: 100%
+  display: block
+  @media (max-width: 900px )
+    max-width: 900px
 
 .basket__container
   padding: 60px 50px 
   color: #fff
   position: relative
+  @media (max-width: 900px )
+    padding: 80px 20px 80px 20px
+  @media (max-width: 600px )
+    padding: 60px 20px 70px 20px
+
 
 .basket__close__wrap
   position: absolute
@@ -18,6 +26,8 @@
   top: 40px
   right: 50px
   cursor: pointer
+  @media (max-width: 900px )
+    right: 20px
 
 .close__wrap
   width: 30px
@@ -30,7 +40,15 @@
   font-weight: 700
   font-size: 38px
   line-height: 43px
-  margin: 0 auto 35px
+  margin: 0 auto 40px
+  @media (max-width: 900px ) 
+    font-size: 32px
+    line-height: 34px
+    margin-bottom: 50px
+  @media (max-width: 600px )
+    font-size: 30px
+    line-height: 32px
+
 
 .basket__form
   display: flex
@@ -43,12 +61,22 @@
   margin: 0 auto 35px 0
   display: flex
   flex-direction: column
+  @media (max-width: 600px ) 
+    max-width: 600px
+    width: 100%
+
 
 .basket__form__label
   font-weight: 500
-  font-size: 22px
-  line-height: 27px
+  font-size: 24px
+  line-height: 28px
   margin-bottom: 15px
+  @media (max-width: 600px )
+    font-size: 22px
+    line-height: 26px
+  span
+    font-size: 18px
+    line-height: 22px
 
 .basket__form__input
   height: 35px
@@ -71,9 +99,9 @@
 
 .basket__form__label__radio
   font-weight: 400
-  font-size: 16px
+  font-size: 18px
   line-height: 20px
-  margin-bottom: 10px
+  margin-bottom: 15px
   position: relative
   padding-left: 25px
   z-index: 4
@@ -114,6 +142,9 @@
   line-height: 25px
   margin-bottom: 10px
   padding-top: 15px
+  @media (max-width: 600px )
+    font-size: 20px
+    line-height: 24px
 
 .basket__info
   font-weight: 400
@@ -136,4 +167,12 @@
     background-color: #fff
     color: #200039
     transition: all 0.3s linear
+  &:active
+    background-color: #fff
+    color: #200039
+  @media (max-width: 600px )
+    font-size: 22px
+    line-height: 24px
+    max-width: 300px
+    padding: 15px
 
