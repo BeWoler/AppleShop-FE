@@ -41,7 +41,7 @@ const Home: NextPage = () => {
         <Discounts/>
         <Delivery/>
         <Basket/>
-        <Card/>
+        <Card/> 
       </main>
     </>
   );

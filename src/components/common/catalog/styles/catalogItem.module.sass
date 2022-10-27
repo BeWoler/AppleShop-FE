@@ -5,6 +5,11 @@
   width: 100%
   display: flex
   flex-direction: column
+  @media (max-width: 450px )
+    max-width: 300px
+  @media (max-width: 380px )
+    max-width: 280px
+
 
 .catalog__item__wrap
   position: relative
@@ -13,6 +18,12 @@
   margin-bottom: 20px
   background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%)
   border: 1px solid #FFFFFF
+  @media (max-width: 450px )
+    width: 300px
+    height: 300px
+  @media (max-width: 380px )
+    width: 280px
+    height: 280px
 
 .catalog__item__title
   font-family: $georgia
@@ -21,6 +32,10 @@
   line-height: 32px
   margin: 0 auto 25px auto
   text-align: center
+  @media (max-width: 600px )
+    font-size: 22px
+    line-height: 26px
+    margin-bottom: 15px
 
 .catalog__item__price
   align-self: flex-end
@@ -28,17 +43,21 @@
   font-weight: 700
   font-size: 22px
   line-height: 32px
+  @media (max-width: 600px )
+    font-size: 20px
+    line-height: 24px
+    margin-bottom: 20px
 
 .catalog__btns_wrap
   display: flex
   justify-content: center
   align-items: center
   margin: 0 auto
+  width: 100%
 
 
 .catalog__item__btn
-  min-width: 160px
-  width: 100%
+  width: 50%
   font-weight: 500
   font-size: 20px
   line-height: 20px
@@ -56,3 +75,6 @@
     background-color: #fff
     color: #200039
     transition: all 0.3s linear
+  @media (max-width: 600px )
+    padding: 15px
+    font-size: 18px

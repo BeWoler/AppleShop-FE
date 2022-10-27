@@ -63,7 +63,7 @@ const Basket: FC = (): JSX.Element => {
           <input placeholder="+375(44)123-45-67" className={styles.basket__form__input} type="tel" id='tel'/>
         </p>
         <p className={styles.basket__form__field}>
-          <label className={styles.basket__form__label} htmlFor="address">Адрес доставки (Населенный пункт, улица, дом, корпус, квартира)</label>
+          <label className={styles.basket__form__label} htmlFor="address">Адрес доставки <span>(Населенный пункт, улица, дом, корпус, квартира)</span></label>
           <input placeholder="г. Минск, ул. Матусевича, д.30, кв. 1" className={styles.basket__form__input} type="text" id='address'/>
         </p>
         <p className={styles.basket__form__field}>

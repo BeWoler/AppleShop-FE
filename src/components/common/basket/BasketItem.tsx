@@ -24,6 +24,7 @@ const BasketItem: FC<IBasketItem> = (props: IBasketItem): JSX.Element => {
             <p className={styles.basket__product__color}>Цвет: {props.colorName}</p>
           </div>
         </div>
+        <div className={styles.counterAndPrice}>
         <div className={styles.basket__product__counter}>
           <button className={styles.basket__product__counter__btn} onClick={() => setCount(count - 1)}>
             <Image src='/assets/icons/minus.svg' alt='cross'  layout="fill"/>
@@ -34,7 +35,8 @@ const BasketItem: FC<IBasketItem> = (props: IBasketItem): JSX.Element => {
           </button>
         </div>
         <p className={styles.basket__product__price} >{props.price} руб</p>
-      </div>
+        </div>
+        </div>
   </>
 }
 
