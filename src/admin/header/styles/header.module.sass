@@ -1,3 +1,5 @@
+// import H1Admin from '../../../../../public/assets/styles/globals.sass'
+  
 .header
   &__container
     padding: 100px 240px 100px 480px
@@ -22,9 +24,13 @@
     margin-bottom: 25px
     color: #fff
   &__changeBtn
+    position: relative
     width: 30px
     height: 30px
     align-self: flex-start
+    background-color: transparent
+    cursor: pointer
+    border: none
   &__socials
     margin-bottom: 60px
     &__item
@@ -38,10 +44,33 @@
     font-size: 18px
     line-height: 22px
     background-color: #fff
+    border-radius: 10px
+    border: none
+    padding: 15px
+    margin-left: 15px
+    &:focus, &:active, &:hover
+      outline: none
+      height: 55px
+      transition: all 0.2s linear
     &::placeholder
       opacity: 70%
 
-
+.save__btn
+  max-width: 200px
+  padding: 15px 30px
+  width: 100%
+  font-style: normal
+  font-weight: 500
+  font-size: 22px
+  line-height: 22px
+  color: #fff
+  background-color: transparent
+  border-radius: 10px
+  border: 1px solid #fff
+  &:hover
+    background-color: #fff
+    color: #200039
+    transition: all 0.3s linear
 
 
 
