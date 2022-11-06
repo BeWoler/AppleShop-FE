@@ -2,10 +2,9 @@ import { FC, Fragment } from 'react';
 import Image from 'next/image';
 import styles from './styles/catalog.module.sass';
 import Link from 'next/link';
-import { CatalogTable } from './CatalogTable';
+import CatalogTable from './CatalogTable';
 
 const CatalogAdmin: FC = (): JSX.Element => {
-
   // const catalogData = [
   //   {
   //     id: 1,
@@ -201,21 +200,23 @@ const CatalogAdmin: FC = (): JSX.Element => {
   //   },
   // ];
 
-  return <div className={styles.catalog}>
+  return (
+    <div className={styles.catalog}>
       <div className={styles.catalog__container}>
         <h1 className={styles.catalog__title}>Каталог:</h1>
         <div className={styles.catalog__paragpaph}>
-        <h2 className={styles.catalog__subtitle}>Наушники</h2>
-        <CatalogTable chapter='наушники' />
+          <h2 className={styles.catalog__subtitle}>Наушники</h2>
+          <CatalogTable chapter="наушники" />
         </div>
         <button className={styles.save__btn}>Сохранить</button>
         <div className={styles.catalog__paragpaph}>
-        <h2 className={styles.catalog__subtitle}>Часы</h2>
-        <CatalogTable chapter='часы' />
+          <h2 className={styles.catalog__subtitle}>Часы</h2>
+          <CatalogTable chapter="часы" />
         </div>
         <button className={styles.save__btn}>Сохранить</button>
       </div>
-  </div>;
+    </div>
+  );
 };
 
 export default CatalogAdmin;

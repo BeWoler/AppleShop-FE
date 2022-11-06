@@ -7,7 +7,7 @@ interface ICatalogTableProp {
   chapter: string;
 }
 
-export const CatalogTable: FC<ICatalogTableProp> = ({
+const CatalogTable: FC<ICatalogTableProp> = ({
   chapter,
 }: ICatalogTableProp): JSX.Element => {
   const catalogData = [
@@ -162,16 +162,24 @@ export const CatalogTable: FC<ICatalogTableProp> = ({
 
   return (
     <div className={styles.catalog__table}>
-      <div className={`${styles.catalog__table__cell} ${styles.catalog__table__column}`}>
+      <div
+        className={`${styles.catalog__table__cell} ${styles.catalog__table__column}`}
+      >
         <p>Фото</p>
       </div>
-      <div className={`${styles.catalog__table__cell} ${styles.catalog__table__column}`}>
+      <div
+        className={`${styles.catalog__table__cell} ${styles.catalog__table__column}`}
+      >
         <p>Название товара</p>
       </div>
-      <div className={`${styles.catalog__table__cell} ${styles.catalog__table__column}`}>
+      <div
+        className={`${styles.catalog__table__cell} ${styles.catalog__table__column}`}
+      >
         <p>Цена</p>
       </div>
-      <div className={`${styles.catalog__table__cell} ${styles.catalog__table__column}`}>
+      <div
+        className={`${styles.catalog__table__cell} ${styles.catalog__table__column}`}
+      >
         <p>Действия</p>
       </div>
       {catalogData.map((item, i) => {
@@ -191,7 +199,9 @@ export const CatalogTable: FC<ICatalogTableProp> = ({
                 <p className={styles.catalog__table__title}>{item.title}</p>
               </div>
               <div className={styles.catalog__table__cell}>
-                <p className={styles.catalog__table__price}>{item.price} руб.</p>
+                <p className={styles.catalog__table__price}>
+                  {item.price} руб.
+                </p>
               </div>
               <div className={styles.catalog__table__cell}>
                 <div className={styles.catalog__table__btns}>
@@ -230,3 +240,5 @@ export const CatalogTable: FC<ICatalogTableProp> = ({
     </div>
   );
 };
+
+export default CatalogTable;
