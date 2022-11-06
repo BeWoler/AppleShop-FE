@@ -101,8 +101,10 @@ const Card: FC = (): JSX.Element => {
                   {productData.features.keys.map((item, i) => {
                     return (
                       <div className={styles.card__chars__item} key={i}>
-                        <div className={styles.card__chars__key} >{item}</div>
-                        <div className={styles.card__chars__value}>{productData.features.values[i]}</div>
+                        <div className={styles.card__chars__key}>{item}</div>
+                        <div className={styles.card__chars__value}>
+                          {productData.features.values[i]}
+                        </div>
                       </div>
                     );
                   })}

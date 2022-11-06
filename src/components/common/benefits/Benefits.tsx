@@ -35,9 +35,9 @@ const Benefits: FC = (): JSX.Element => {
       <div className={styles.benefits__img__overflow}>
         <div className={styles.benefits__img_wrap}>
           <Image
-          src="/assets/imgs/benefits.png"
-          alt="appleWatch"
-          layout='fill'
+            src="/assets/imgs/benefits.png"
+            alt="appleWatch"
+            layout="fill"
           />
         </div>
       </div>
@@ -47,7 +47,7 @@ const Benefits: FC = (): JSX.Element => {
             return (
               <li key={item.id}>
                 <div className={styles.benefits__svg}>
-                  <Image src={item.icon} layout='fill' alt={item.icon} />
+                  <Image src={item.icon} layout="fill" alt={item.icon} />
                 </div>
                 <div>
                   <h2>{item.title}</h2>

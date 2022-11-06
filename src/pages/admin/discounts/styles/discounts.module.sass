@@ -1,12 +1,10 @@
-.benefits
+.discounts
   &__container
-    padding: 100px 240px 100px 480px
+    padding: 100px 0
   &__title
     font-weight: 600
     font-size: 42px
     line-height: 51px
-    margin-bottom: 50px
-  &__paragpaph
     margin-bottom: 50px
   &__subtitle
     font-weight: 600
@@ -17,7 +15,7 @@
     background-color: #200039
     border-radius: 20px
     display: grid
-    grid-template-columns: 100px 300px 600px 200px
+    grid-template-columns: 200px 800px 200px
     color: #fff
     width: 1200px
     border: 2px solid #fff
@@ -29,14 +27,9 @@
       border-right: 2px solid #fff
       padding: 20px 15px 
       overflow: hidden
-    &__undercell
-      height: 30px
-      overflow: hidden
-    &__icon
-      position: relative
-      height: 30px
-      width: 30px
-    &__title
+      &:last-child
+        border: none
+    &__column, &__date
       font-weight: 600
       font-size: 22px
       line-height: 27px
@@ -57,31 +50,21 @@
         background-color: transparent
         border: none
         cursor: pointer
-  &__linkInput
-    width: 800px
-    height: 50px
-    background: #200039
-    border-radius: 10px
-    color: #fff
-    padding: 15px 
-    border: none
-    font-weight: 500
-    font-size: 18px
-    line-height: 22px
-    &::placeholder
-      opacity: 70%
-.save__btn
-  max-width: 200px
-  padding: 15px 30px
-  width: 100%
-  font-style: normal
-  font-weight: 500
-  font-size: 22px
-  line-height: 22px
-  background-color: transparent
-  color: #200039
-  border-radius: 10px
-  &:hover
-    color: #fff
-    background-color: #200039
-    transition: all 0.3s linear
+    &__add
+      grid-column: 1 / 4
+      button
+        max-width: 200px
+        padding: 15px 30px
+        width: 100%
+        font-style: normal
+        font-weight: 500
+        font-size: 22px
+        line-height: 22px
+        background-color: transparent
+        color: #fff
+        border-radius: 10px
+        border: 1px solid #fff
+        &:hover
+          color: #200039
+          background-color: #fff
+          transition: all 0.3s linear

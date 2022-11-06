@@ -8,15 +8,6 @@ import Catalog from '@/components/common/catalog/Catalog';
 import Basket from '@/components/common/basket/Basket';
 import Card from '@/components/common/card/Card';
 import MobileNav from '@/components/common/mobileNav/MobileNav';
-import BenefitsAdmin from 'admin/benefits/Benefits';
-import HeaderAdmin from 'admin/header/Header';
-import ChangeBenefits from 'admin/changeBenefits/ChangeBenefits';
-import CatalogAdmin from 'admin/catalog/Catalog';
-import AddCatalogItem from 'admin/addCatalogItem/AddCatalogItem';
-import DiscountsAdmin from 'admin/discounts/Discounts';
-import ChangeDiscounts from 'admin/changeDiscounts/ChangeDiscounts';
-import DeliveryAdmin from 'admin/delivery/Delivery';
-import ChangeDelivery from 'admin/changeDelivery/changeDelivery';
 
 const Home: NextPage = () => {
   return (
@@ -44,22 +35,13 @@ const Home: NextPage = () => {
         />
       </Head>
       <main>
-        <Banner/>
-        <ChangeDiscounts/>
-        <BenefitsAdmin/>
-        <ChangeDelivery/>
-        <AddCatalogItem/>
-        <DiscountsAdmin/>
-        <DeliveryAdmin/>
-        <HeaderAdmin/>
-        <ChangeBenefits/>
-        <CatalogAdmin/>
-        <Benefits/>
-        <Catalog/>
-        <Discounts/>
-        <Delivery/>
-        <Basket/>
-        <Card/> 
+        <Banner />
+        <Benefits />
+        <Catalog />
+        <Discounts />
+        <Delivery />
+        <Basket />
+        <Card />
       </main>
     </>
   );
