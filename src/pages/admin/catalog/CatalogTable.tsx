@@ -215,14 +215,14 @@ const CatalogTable: FC<ICatalogTableProp> = ({
                   <button>
                     <Image
                       src="/assets/icons/copyBtn.svg"
-                      alt="изменить"
+                      alt="копировать"
                       layout="fill"
                     ></Image>
                   </button>
                   <button>
                     <Image
                       src="/assets/icons/delteBtn.svg"
-                      alt="изменить"
+                      alt="удалить"
                       layout="fill"
                     ></Image>
                   </button>

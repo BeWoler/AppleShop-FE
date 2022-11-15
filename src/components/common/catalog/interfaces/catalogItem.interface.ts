@@ -1,7 +1,7 @@
 import { ICatalogPhotos } from "./catalogPhotos.interface";
 
 export interface ICatalogItemProps {
-  photos?: Array<ICatalogPhotos> | ICatalogPhotos;
+  photo: string;
   title: string;
   price: number;
   key: number;

@@ -8,6 +8,7 @@ import Catalog from '@/components/common/catalog/Catalog';
 import Basket from '@/components/common/basket/Basket';
 import Card from '@/components/common/card/Card';
 import MobileNav from '@/components/common/mobileNav/MobileNav';
+import DeliverySlider from '@/components/common/deliverySlider/Delivery';
 
 const Home: NextPage = () => {
   return (
@@ -39,9 +40,8 @@ const Home: NextPage = () => {
         <Benefits />
         <Catalog />
         <Discounts />
-        <Delivery />
-        <Basket />
-        <Card />
+        <DeliverySlider/>
+        <Card/>
       </main>
     </>
   );

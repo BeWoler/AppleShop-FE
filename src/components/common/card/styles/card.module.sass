@@ -38,7 +38,7 @@
   line-height: 50px
   font-family: $georgia
   margin-bottom: 60px
-  margin-left: 100px
+  margin-left: 90px
   color: #fff
   @media (max-width: 1375px )
     margin-left: 70px
@@ -99,8 +99,9 @@
   transition: all 0.1s linear
   &:hover
     border: 2px solid #fff
-  &:active
-    border: 2px solid #fff
+  &:focus, &:active
+    width: 33px
+    height: 33px
 
 .card__chars
   display: flex
@@ -213,7 +214,6 @@
   padding: 19px
   max-width: 320px
   width: 100%
-  // margin: 0 auto
   border: 1px solid #FFFFFF
   border-radius: 20px
   font-weight: 500
@@ -223,7 +223,7 @@
   color: #fff
   cursor: pointer
   margin-bottom: 50px
-  &:hover
+  &:hover, &:active
     background-color: #fff
     color: #200039
     transition: all 0.3s linear
