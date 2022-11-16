@@ -63,6 +63,7 @@ const Basket: FC<IBasket> = ({
         : `${styles.basket} ${styles.inactive}`
     }>
       <div className={styles.basket__container}>
+        <div className={styles.basket__undercontainer}>
         <button className={styles.basket__close__wrap} onClick={() =>setCartIsOpen(!cartIsOpen)}>
           <div className={styles.close__wrap}>
             <Image
@@ -164,6 +165,7 @@ const Basket: FC<IBasket> = ({
           </div>
           <button className={styles.basket__form__button} onClick={() =>setCartIsOpen(!cartIsOpen) }>Заказать</button>
         </form>
+        </div>
       </div>
     </div>
   );

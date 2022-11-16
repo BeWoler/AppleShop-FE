@@ -22,7 +22,9 @@ const BasketItem: FC<IBasketItem> = (props: IBasketItem): JSX.Element => {
         </button>
         <div className={styles.basket__product__right}>
           <div className={styles.basket__product__img}>
+            <div className={styles.basket__product__img__wrap}>
             <Image src={props.imgLink} alt={props.title} layout="fill" />
+            </div>
           </div>
           <div className={styles.basket__product__info}>
             <h2 className={styles.basket__product__title}>{props.title}</h2>

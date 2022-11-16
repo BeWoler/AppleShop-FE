@@ -70,7 +70,7 @@ const Card: FC = (): JSX.Element => {
       ],
       values: ['алюминий', 'да', '42мм', 'цифровой', 'сапфировое'],
     },
-    description: 'Умные kkjnvkjbkvjbsbvbslbvls bvfsiubvksjbviuhwwiurvlkbsdb wrisbvsgrbshbvhbjhbgebfhdbcsbj vbyglsvbjbdtryhbdiujvfnjkvn teliyheujdnkvjnfljbeuhrv;i snjnugtgksfjnvk dbfudkfjvdlutbd;jvbdjbgl uisjfhwiu nvjsndovn  soirgnosvkjnrgl jbljxbliutdblkjnkjbniufhie fznflkjbndlzukhfijn clksjuih ilfsjvhniuhwgiuhnsvkjhrruiljsfnvi lrhgiulzgjnui подсказки про физическую активность. Усовершенствованное приложение «Пульс». Любимые плейлисты прямо на запястье. Встроенный высотомер. И более мощный процессор.',
+    description: 'Умные подсказки про физическую активность. Усовершенствованное приложение «Пульс». Любимые плейлисты прямо на запястье. Встроенный высотомер. И более мощный процессор.',
     price: 1050,
   };
 
@@ -116,7 +116,7 @@ const Card: FC = (): JSX.Element => {
             <button className={`${styles.card__orderBtn} ${styles.orderBtn}`}>
               Заказать
             </button>
-            <div className={styles.card__info_item}>
+            <div className={`${styles.card__info_item} ${styles.card__info_item__chars}`}>
               <h2 className={styles.card__subtitle}>
                 Основные характеристики:
               </h2>

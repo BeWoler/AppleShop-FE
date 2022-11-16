@@ -29,14 +29,16 @@ const Header: FC = (): JSX.Element => {
             <Image src="/assets/icons/menu.svg" layout="fill" alt="меню" />
           </div>
         )}
-        <div className={styles.header__logo}>
+        <Link href='/'>
+        <a className={styles.header__logo}>
           <Image
             src="/assets/icons/apple-icon.svg"
-            layout="fill"
+            layout="fill"  
             alt="apple icon"
           />
-        </div>
-        <Nav />
+        </a>
+        </Link>
+        <Nav/>
         <div className={styles.header__container_svg}>
           <div className={styles.header__inst}>
             <Link href="/yandex.ru">
