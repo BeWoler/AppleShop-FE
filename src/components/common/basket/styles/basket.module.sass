@@ -1,22 +1,54 @@
 @import ../../../../../public/assets/styles/variables/fonts
   
 .basket
+  position: fixed
+  top: 0
+  right: 0
+  overflow: auto
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  flex-shrink: 0
+  width: 100%
+  z-index: 10
+  backdrop-filter: blur(7px)
+
+.active
+  visibility: visible
+.inactive
+  visibility: hidden
+
+
+.basket__container
   background-color: #200039
   max-width: 800px
   width: 100%
-  display: block
-  @media (max-width: 900px )
-    max-width: 900px
-
-.basket__container
+  height: 100vh
+  overflow: auto
   padding: 60px 50px 
   color: #fff
   position: relative
+  margin: 0 auto
   @media (max-width: 900px )
     padding: 80px 20px 80px 20px
+    max-width: 900px
   @media (max-width: 600px )
     padding: 60px 20px 70px 20px
+  &::-webkit-scrollbar
+    width: 3px
+    background: rgba(255, 255, 255, 0.5)
+    @media (max-width: 600px )
+      width: 0.5px
+      visibility: hidden
+  &::-webkit-scrollbar-thumb
+    border-radius: 20px
+    background: rgba(255, 255, 255, 0.8)
+    @media (max-width: 600px )
+      width: 0.5px
+      visibility: hidden
 
+.basket__undercontainer
+  height: 1000px
 
 .basket__close__wrap
   position: absolute
@@ -155,11 +187,11 @@
   padding: 19px
   max-width: 320px
   width: 100%
-  margin: 0 auto
+  margin: 0 auto 60px
   border: 1px solid #FFFFFF
   border-radius: 20px
   font-weight: 500
-  font-size: 28px
+  font-size: 24px
   line-height: 34px
   background-color: transparent
   color: #fff

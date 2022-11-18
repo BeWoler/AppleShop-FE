@@ -4,10 +4,10 @@ import styles from './styles/nav.module.sass';
 import Image from 'next/image';
 
 const navData = [
-  { id: 1, title: 'О продукции', href: '' },
-  { id: 2, title: 'Каталог', href: '' },
-  { id: 3, title: 'Акции', href: '' },
-  { id: 4, title: 'Доставка & Оплата', href: '' },
+  { id: 1, title: 'О продукции', href: '#benefits'},
+  { id: 2, title: 'Каталог', href: '#catalog' },
+  { id: 3, title: 'Акции', href: '#discounts' },
+  { id: 4, title: 'Доставка & Оплата', href: '#delivery' },
 ];
 
 const Nav: FC = (): JSX.Element => {

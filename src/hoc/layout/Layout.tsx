@@ -16,7 +16,7 @@ const Layout: FC<ILayout> = ({ children }: ILayout) => {
   if (router.pathname.includes('/admin')) {
     return (
       <div className={styles.containerAdmin}>
-        <div style={{marginRight: '25%'}}>
+        <div style={{marginRight: '480px'}}>
           <Menu />
         </div>
         {children}

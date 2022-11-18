@@ -11,13 +11,13 @@ const Discounts: FC = (): JSX.Element => {
     },
     {
       id: 2,
-      date: '30.10.2022',
-      text: 'При покупке Airpods Pro или Airpods 3 скидка на любые смарт-часы 20%',
+      date: '31.12.2022',
+      text: 'При покупке Apple Watch 7 скидка на любые наушники 50%',
     },
   ];
 
   return (
-    <div className={styles.discounts}>
+    <div className={styles.discounts} id='discounts'>
       {discountsData?.map((item) => {
         return (
           <div key={item.id} className={styles.discounts__container}>

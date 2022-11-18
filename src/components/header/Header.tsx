@@ -4,9 +4,12 @@ import styles from './styles/header.module.sass';
 import Image from 'next/image';
 import Link from 'next/link';
 import MobileNav from '../common/mobileNav/MobileNav';
+import Basket from '../common/basket/Basket';
 
 const Header: FC = (): JSX.Element => {
   const [isOpen, setOpen] = useState<boolean>(false);
+  const [cartIsOpen, setCartIsOpen] = useState<boolean>(false);
+
   return (
     <header className={styles.header}>
       <div className={styles.header__container}>
@@ -26,14 +29,16 @@ const Header: FC = (): JSX.Element => {
             <Image src="/assets/icons/menu.svg" layout="fill" alt="меню" />
           </div>
         )}
-        <div className={styles.header__logo}>
+        <Link href='/'>
+        <a className={styles.header__logo}>
           <Image
             src="/assets/icons/apple-icon.svg"
-            layout="fill"
+            layout="fill"  
             alt="apple icon"
           />
-        </div>
-        <Nav />
+        </a>
+        </Link>
+        <Nav/>
         <div className={styles.header__container_svg}>
           <div className={styles.header__inst}>
             <Link href="/yandex.ru">
@@ -46,16 +51,20 @@ const Header: FC = (): JSX.Element => {
               </a>
             </Link>
           </div>
-          <div className={styles.header__cart}>
+          <button className={styles.header__cart} onClick={() => setCartIsOpen(!cartIsOpen)}>
             <Image
               src="/assets/icons/cart-icon.svg"
               layout="fill"
               alt="корзина"
             />
-          </div>
+          </button>
         </div>
       </div>
       <MobileNav isOpen={isOpen} setOpen={setOpen} />
+      {cartIsOpen?
+        <Basket cartIsOpen={cartIsOpen} setCartIsOpen={setCartIsOpen}/>
+        : null
+      }
     </header>
   );
 };

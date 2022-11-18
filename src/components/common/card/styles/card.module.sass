@@ -13,7 +13,6 @@
     padding: 140px 30px 20px 30px
   @media (max-width: 600px )
     padding: 120px 20px 10px 20px
-    text-align: center
   @media (max-width: 450px )
     padding: 100px 20px 10px 20px
   
@@ -28,8 +27,6 @@
   @media (max-width: 1170px )
     flex-direction: column
     align-items: center
-    row-gap: 70px
-  @media (max-width: 1170px )
     row-gap: 50px
 
 .card__title
@@ -38,36 +35,43 @@
   line-height: 50px
   font-family: $georgia
   margin-bottom: 60px
-  margin-left: 100px
+  margin-left: 86px
   color: #fff
   @media (max-width: 1375px )
     margin-left: 70px
     font-size: 32px
     line-height: 36px
+  @media (max-width: 1250px )
+    margin-left: 80px
   @media (max-width: 1170px )
     text-align: center
-    margin-bottom: 50px
     margin-left: 0
+    margin-bottom: 50px
   @media (max-width: 600px )
     font-size: 30px
     line-height: 32px
     margin-bottom: 40px
 
+
 .card__slide
   max-width: 600px
   @media (max-width: 1375px )
-    max-width: 450px
+    max-width: 520px
   @media (max-width: 600px )
     max-width: 420px
   @media (max-width: 600px )
     max-width: 320px
-
+.card__right
+  @media (max-width: 1170px )
+    display: flex
+    align-items: center
+    flex-direction: column
 .card__info_item
   margin-bottom: 50px
   @media (max-width: 600px)
     text-align: left
-
-
+.card__info_item__chars
+  align-self: flex-start
 .card__subtitle
   font-style: normal
   font-weight: 600
@@ -75,22 +79,18 @@
   line-height: 32px
   margin-bottom: 25px
   @media (max-width: 1375px )
-    font-size: 22px
-    line-height: 26px
+    font-size: 26px
+    line-height: 32px
   @media (max-width: 450px )
     margin-bottom: 20px
-
-
 .colorTitle
   margin-bottom: 25px
   @media (max-width: 1170px )
     margin-bottom: 0
-
 .card__color_list
   display: flex
   align-items: center
   column-gap: 20px
-
 .card__color_item
   width: 30px
   height: 30px
@@ -99,32 +99,37 @@
   transition: all 0.1s linear
   &:hover
     border: 2px solid #fff
-  &:active
-    border: 2px solid #fff
-
+  &:focus, &:active
+    width: 33px
+    height: 33px
 .card__chars
   display: flex
   column-gap: 50px
-
 .hidden__chars
-  height: 180px
+  height: 205px
   overflow: hidden
   @media (max-width: 1375px )
-    height: 173px
+    height: 200px
   @media (max-width: 450px )
-    height: 160px
+    height: 165px
   @media (max-width: 390px )
     height: 175px
-  @media (max-width: 363px )
+  @media (max-width: 373px )
     height: 188px
+  @media (max-width: 362px )
+    height: 205px
 
 .hidden__desc
-  height: 100px
+  height: 50px
   overflow: hidden
   @media (max-width: 1375px )
-    height: 90px
+    height: 70px
+  @media (max-width: 1250px )
+    height: 67px
+  @media (max-width: 1170px )
+    height: 45px
   @media (max-width: 450px )
-    height: 100px
+    height: 60px
 
 
 .card__chars__list
@@ -132,18 +137,24 @@
   flex-direction: column
   div
     display: flex
-    gap: 50px
+    gap: 80px
     justify-content: space-between
     align-items: center
+    @media (max-width: 600px )
+      gap: 55px
+    @media (max-width: 450px )
+      gap: 50px
 
 .card__chars__item
   font-weight: 500
   font-size: 20px
   line-height: 24px
-  margin-bottom: 15px
+  margin-bottom: 25px
   @media (max-width: 1375px )
     font-size: 18px
     line-height: 22px
+  @media (max-width: 450px )
+    margin-bottom: 18px
 
 .card__chars__key
   width: 60%
@@ -198,22 +209,18 @@
 
 .card__price
   font-weight: 700
-  font-size: 36px
+  font-size: 32px
   line-height: 42px
   margin-bottom: 35px
-  @media (max-width: 1375px )
-    font-size: 32px
-    line-height: 36px
   @media (max-width: 600px)
     font-size: 30px
     line-height: 32px
-
+    text-align: center
 
 .card__orderBtn
   padding: 19px
-  max-width: 320px
+  max-width: 320px 
   width: 100%
-  // margin: 0 auto
   border: 1px solid #FFFFFF
   border-radius: 20px
   font-weight: 500
@@ -223,7 +230,7 @@
   color: #fff
   cursor: pointer
   margin-bottom: 50px
-  &:hover
+  &:hover, &:active
     background-color: #fff
     color: #200039
     transition: all 0.3s linear
@@ -231,6 +238,8 @@
     font-size: 24px
     line-height: 26px
     max-width: 300px
+  @media (max-width: 600px )
+    margin: 0 auto 70px auto
   @media (max-width: 450px )
     font-size: 22px
     line-height: 24px
@@ -246,7 +255,7 @@
     column-gap: 20px
     justify-content: left
     align-items: center
-  @media (max-width: 600px )
+  @media (max-width: 1170px )
     justify-content: center
     margin-bottom: 35px
 
@@ -254,15 +263,13 @@
   display: none
   @media (max-width: 1170px)
     display: block
-  @media (max-width: 600px )
-    margin: 0 auto 50px auto
+    margin: 0 auto 70px auto
 
-  
 .priceFirst
   display: none
   @media (max-width: 1170px)
     display: block
-  @media (max-width: 600px )
+    text-align: center
     margin: 0 auto 35px auto
 
 

@@ -27,4 +27,18 @@
 
 .nav__menu__link, .nav__menu__item
   padding: 20px 0
-
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    bottom: 10px
+    left: 50%
+    width: 0%
+    height: 1px
+    background-color: transparent
+    transition: all .2s ease-out
+  &:hover
+    &::after
+      left: 0
+      width: 100%
+      background-color: #fff

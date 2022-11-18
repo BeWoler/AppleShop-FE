@@ -2,25 +2,32 @@ import { FC } from 'react';
 import styles from './styles/card.module.sass';
 import ProdSlider from './ProdSlider';
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+
 
 const Card: FC = (): JSX.Element => {
   const [moreChar, setMoreChar] = useState(true);
   const [moreDesc, setMoreDesc] = useState(true);
 
   const productData = {
-    id: 4,
-    title: 'Apple Watch Series 7 42мм',
-    photos: ['/assets/imgs/PodWatch7.png', '/assets/imgs/PodWatch7.png'],
-    colors: [
+    id: 6,
+    title: 'Apple Watch SE 42мм',
+    chapter: 'часы',
+    photos: [
       {
-        color: '#000',
-        colorName: 'Черный',
-        id: 1,
+        imgLink: ['/assets/imgs/watchsewhite-1__1_-removebg-preview.png', '/assets/imgs/watchsewhite-2__1_-removebg-preview.png','/assets/imgs/watchsewhite-3__1_-removebg-preview.png', ],
+        imgColor: '#fff',
+        colorName: 'Белый',
       },
       {
-        color: '#BF1010',
-        colorName: 'Черный',
-        id: 2,
+        imgLink:['/assets/imgs/watchsered-1-removebg-preview.png', '/assets/imgs/watchsered-2-removebg-preview.png', '/assets/imgs/watchsered-3-removebg-preview.png',],
+        imgColor: '#DF1010',
+        colorName: 'Красный',
+      },
+      {
+        imgLink:[ '/assets/imgs/watchseblue-1-removebg-preview.png'],
+        imgColor: '#4473A4',
+        colorName: 'Синий',
       },
     ],
     features: {
@@ -29,26 +36,15 @@ const Card: FC = (): JSX.Element => {
         'Сменный ремешок',
         'Размер',
         'Способ отображения времени',
-        'Материал',
-        'Сменный ремешок',
-        'Размер',
-        'Способ отображения времени',
+        'Стекло'
       ],
-      values: [
-        'алюминий',
-        'да',
-        '42мм',
-        'цифровой',
-        'алюминий',
-        'да',
-        '42мм',
-        'цифровой',
-      ],
+      values: ['алюминий', 'да', '42мм', 'цифровой', 'сапфировое'],
     },
-    description:
-      'Умные подсказки про физическую активность. И более мощный процессор.  И более мощный процессор. Умные подсказки про физическую активность. Усовершенствованное приложение «Пульс». Встроенный высотомер. И более мощный процессор. Умные подсказки про физическую активность. Усовершенствованное приложение «Пульс». Встроенный высотомер. И более мощный процессор. Умные подсказки про физическую активность. Усовершенствованное приложение «Пульс». Встроенный высотомер. Умные подсказки про физическую активность. Усовершенствованное приложение «Пульс». Встроенный высотомер.',
+    description: 'Умные подсказки про физическую активность. Усовершенствованное приложение «Пульс». Любимые плейлисты прямо на запястье. Встроенный высотомер. И более мощный процессор.',
     price: 1050,
   };
+
+  const [colorFilter, setColorFilter] = useState(productData.photos[1].imgColor);
 
   return (
     <div className={styles.card}>
@@ -58,8 +54,9 @@ const Card: FC = (): JSX.Element => {
           <div className={styles.card__left}>
             <div className={styles.card__slide}>
               <ProdSlider
-                photos={productData.photos}
+                photos={productData.photos} 
                 title={productData.title}
+                colorFilter={colorFilter}
               />
             </div>
           </div>
@@ -69,15 +66,16 @@ const Card: FC = (): JSX.Element => {
                 Цвет
               </h2>
               <div className={styles.card__color_list}>
-                {productData.colors.map((item) => {
-                  return (
-                    <button
-                      key={item.id}
-                      className={styles.card__color_item}
-                      style={{ backgroundColor: item.color }}
-                    ></button>
-                  );
-                })}
+                {productData.photos.map((item) => {
+                    return (
+                      <button
+                        key={uuidv4()}
+                        className={styles.card__color_item}
+                        style={{ backgroundColor: item.imgColor }}
+                        onClick={()=>setColorFilter(item.imgColor)}
+                      ></button>
+                    );
+                  })}
               </div>
             </div>
             <p className={`${styles.card__price} ${styles.priceFirst}`}>
@@ -86,7 +84,7 @@ const Card: FC = (): JSX.Element => {
             <button className={`${styles.card__orderBtn} ${styles.orderBtn}`}>
               Заказать
             </button>
-            <div className={styles.card__info_item}>
+            <div className={`${styles.card__info_item} ${styles.card__info_item__chars}`}>
               <h2 className={styles.card__subtitle}>
                 Основные характеристики:
               </h2>

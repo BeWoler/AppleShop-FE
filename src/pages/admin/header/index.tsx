@@ -12,7 +12,16 @@ const HeaderAdmin: FC = (): JSX.Element => {
           <div className={styles.header__logo}>
             <h2 className={styles.header__subtitle}>Лого (в формате svg)</h2>
             <div className={styles.header__logo__item}>
-              <input className={styles.header__input_file} type="file" />
+              <div className={styles.header__input_file__common}>
+                <input className={styles.header__input_file} type="file"/>
+                  <div className={styles.header__input_file__plus}>
+                    <div>
+                      <Image src="/assets/icons/plusImg.svg"
+                        alt="Add image"
+                        layout="fill"/>
+                    </div>
+                  </div>
+              </div>
               <button className={styles.header__changeBtn}>
                 <Image
                   src="/assets/icons/change.svg"
@@ -25,7 +34,16 @@ const HeaderAdmin: FC = (): JSX.Element => {
           <div className={styles.header__socials}>
             <h2 className={styles.header__subtitle}>Соцсети</h2>
             <div className={styles.header__socials__item}>
-              <input className={styles.header__input_file} type="file" />
+            <div className={styles.header__input_file__common}>
+                <input className={styles.header__input_file} type="file"/>
+                  <div className={styles.header__input_file__plus}>
+                    <div>
+                      <Image src="/assets/icons/plusImg.svg"
+                        alt="Add image"
+                        layout="fill"/>
+                    </div>
+                  </div>
+              </div>
               <button className={styles.header__changeBtn}>
                 <Image
                   src="/assets/icons/change.svg"
@@ -40,7 +58,16 @@ const HeaderAdmin: FC = (): JSX.Element => {
               />
             </div>
             <div className={styles.header__socials__item}>
-              <input className={styles.header__input_file} type="file" />
+            <div className={styles.header__input_file__common}>
+                <input className={styles.header__input_file} type="file"/>
+                  <div className={styles.header__input_file__plus}>
+                    <div>
+                      <Image src="/assets/icons/plusImg.svg"
+                        alt="Add image"
+                        layout="fill"/>
+                    </div>
+                  </div>
+              </div>
               <button className={styles.header__changeBtn}>
                 <Image
                   src="/assets/icons/change.svg"
@@ -55,7 +82,16 @@ const HeaderAdmin: FC = (): JSX.Element => {
               />
             </div>
             <div className={styles.header__socials__item}>
-              <input className={styles.header__input_file} type="file" />
+            <div className={styles.header__input_file__common}>
+                <input className={styles.header__input_file} type="file"/>
+                  <div className={styles.header__input_file__plus}>
+                    <div>
+                      <Image src="/assets/icons/plusImg.svg"
+                        alt="Add image"
+                        layout="fill"/>
+                    </div>
+                  </div>
+              </div>
               <button className={styles.header__changeBtn}>
                 <Image
                   src="/assets/icons/change.svg"

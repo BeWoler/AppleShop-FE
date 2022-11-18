@@ -2,8 +2,13 @@ import { FC } from 'react';
 import styles from './styles/basket.module.sass';
 import Image from 'next/image';
 import BasketItem from './BasketItem';
+import { IBasket } from './intefaces/IBasket.interface';
+import { useEffect, useRef } from 'react';
 
-const Basket: FC = (): JSX.Element => {
+const Basket: FC<IBasket> = ({
+  cartIsOpen,
+  setCartIsOpen,
+}: IBasket): JSX.Element => {
   const basketData = [
     {
       id: 1,
@@ -44,10 +49,22 @@ const Basket: FC = (): JSX.Element => {
     ],
   };
 
+  useEffect(()=>{
+    document.body.style.overflow = 'hidden'
+    return()=>{
+      document.body.style.overflow = 'auto'
+    }
+  }, [])
+
   return (
-    <div className={styles.basket}>
+    <div className={
+      cartIsOpen
+        ? `${styles.basket} ${styles.active}`
+        : `${styles.basket} ${styles.inactive}`
+    }>
       <div className={styles.basket__container}>
-        <button className={styles.basket__close__wrap}>
+        <div className={styles.basket__undercontainer}>
+        <button className={styles.basket__close__wrap} onClick={() =>setCartIsOpen(!cartIsOpen)}>
           <div className={styles.close__wrap}>
             <Image
               className={styles.basket__close}
@@ -146,8 +163,9 @@ const Basket: FC = (): JSX.Element => {
               *Менеджер перезвонит вам с 10:00 до 20:00 для подтверждения заказа
             </p>
           </div>
-          <button className={styles.basket__form__button}>Заказать</button>
+          <button className={styles.basket__form__button} onClick={() =>setCartIsOpen(!cartIsOpen) }>Заказать</button>
         </form>
+        </div>
       </div>
     </div>
   );
