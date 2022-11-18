@@ -15,47 +15,17 @@ const Card: FC = (): JSX.Element => {
     chapter: 'часы',
     photos: [
       {
-        imgLink: '/assets/imgs/watchsewhite-1__1_-removebg-preview.png',
+        imgLink: ['/assets/imgs/watchsewhite-1__1_-removebg-preview.png', '/assets/imgs/watchsewhite-2__1_-removebg-preview.png','/assets/imgs/watchsewhite-3__1_-removebg-preview.png', ],
         imgColor: '#fff',
         colorName: 'Белый',
       },
       {
-        imgLink: '/assets/imgs/watchsewhite-2__1_-removebg-preview.png',
-        imgColor: '#fff',
-        colorName: 'Белый',
-      },
-      {
-        imgLink: '/assets/imgs/watchsewhite-3__1_-removebg-preview.png',
-        imgColor: '#fff',
-        colorName: 'Белый',
-      },
-      {
-        imgLink: '/assets/imgs/watchsered-1-removebg-preview.png',
+        imgLink:['/assets/imgs/watchsered-1-removebg-preview.png', '/assets/imgs/watchsered-2-removebg-preview.png', '/assets/imgs/watchsered-3-removebg-preview.png',],
         imgColor: '#DF1010',
         colorName: 'Красный',
       },
       {
-        imgLink: '/assets/imgs/watchsered-2-removebg-preview.png',
-        imgColor: '#DF1010',
-        colorName: 'Красный',
-      },
-      {
-        imgLink: '/assets/imgs/watchsered-3-removebg-preview.png',
-        imgColor: '#DF1010',
-        colorName: 'Красный',
-      },
-      {
-        imgLink: '/assets/imgs/watchseblue-1-removebg-preview.png',
-        imgColor: '#4473A4',
-        colorName: 'Синий',
-      },
-      {
-        imgLink: '/assets/imgs/watchseblue-2-removebg-preview.png',
-        imgColor: '#4473A4',
-        colorName: 'Синий',
-      },
-      {
-        imgLink: '/assets/imgs/watchseblue-3-removebg-preview.png',
+        imgLink:[ '/assets/imgs/watchseblue-1-removebg-preview.png'],
         imgColor: '#4473A4',
         colorName: 'Синий',
       },
@@ -75,8 +45,6 @@ const Card: FC = (): JSX.Element => {
   };
 
   const [colorFilter, setColorFilter] = useState(productData.photos[1].imgColor);
-
-  const sortedColors = Array.from(new Set(productData.photos.map((item) => item.imgColor)));
 
   return (
     <div className={styles.card}>
@@ -98,13 +66,13 @@ const Card: FC = (): JSX.Element => {
                 Цвет
               </h2>
               <div className={styles.card__color_list}>
-                {sortedColors.map((item) => {
+                {productData.photos.map((item) => {
                     return (
                       <button
                         key={uuidv4()}
                         className={styles.card__color_item}
-                        style={{ backgroundColor: item }}
-                        onClick={()=>setColorFilter(item)}
+                        style={{ backgroundColor: item.imgColor }}
+                        onClick={()=>setColorFilter(item.imgColor)}
                       ></button>
                     );
                   })}
