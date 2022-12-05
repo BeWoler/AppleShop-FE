@@ -1,10 +1,7 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import styles from './styles/addCatalogItem.module.sass';
-import Link from 'next/link';
 import { useState } from 'react';
-import { useId } from 'react';
-import keyValueObj from './interfaces/keyValue';
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -28,7 +25,7 @@ const AddCatalogItem: FC = (): JSX.Element => {
     key: 'введите критерий',
     value: 'введите значение'
   }
-  const [charsInputs, setCharsInputs] = useState<Array<keyValueObj>>(initialStateInputs);
+  const [charsInputs, setCharsInputs] = useState<Array<{ key: string, value: string}>>(initialStateInputs);
 
   const initialStatePhotos = ['fistElPhotoesId']
   const [photos, setPhotos] = useState<Array<string>>(initialStatePhotos);
