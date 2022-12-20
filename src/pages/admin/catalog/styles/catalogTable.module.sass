@@ -1,0 +1,59 @@
+.catalog__table
+  background-color: #200039
+  border-radius: 20px
+  display: grid
+  grid-template-columns: 250px 450px 300px 200px
+  color: #fff
+  width: 1200px
+  border: 2px solid #fff
+  &__cell
+    display: flex
+    align-items: center
+    justify-content: center
+    border-bottom: 2px solid #fff
+    border-right: 2px solid #fff
+    padding: 20px 15px 
+    overflow: hidden
+    &:last-child
+      border: none
+  &__column, &__title, &__price
+    font-weight: 600
+    font-size: 22px
+    line-height: 27px
+    text-align: center
+  &__photo
+    position: relative
+    width: 120px
+    height: 120px
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%)
+    border: 1px solid #FFFFFF
+  &__btns
+    display: flex
+    align-items: center
+    justify-content: center
+    column-gap: 30px
+    button
+      position: relative
+      width: 30px
+      height: 30px
+      background-color: transparent
+      border: none
+      cursor: pointer
+  &__add
+    grid-column: 1 / 5
+    button
+      max-width: 200px
+      padding: 15px 30px
+      width: 100%
+      font-style: normal
+      font-weight: 500
+      font-size: 22px
+      line-height: 22px
+      background-color: transparent
+      color: #fff
+      border-radius: 10px
+      border: 1px solid #fff
+      &:hover
+        color: #200039
+        background-color: #fff
+        transition: all 0.3s linear

@@ -1,0 +1,267 @@
+.addItem
+  &__container
+    padding: 100px 0
+    h1
+      font-weight: 600
+      font-size: 42px
+      line-height: 51px
+      margin-bottom: 50px
+  &__content
+    background-color: #200039
+    border-radius: 20px
+    padding: 50px
+    &__subitem
+      margin-bottom: 30px
+    &__item
+      margin-bottom: 50px
+      h3
+        font-weight: 600
+        font-size: 22px
+        line-height: 27px
+        margin-bottom: 25px
+        color: #fff
+  &__color
+    margin-bottom: 30px
+  &__addImg
+    display: flex
+    align-items: flex-start
+    &__btn
+      max-width: 320px
+      padding: 15px 30px
+      width: 100%
+      font-style: normal
+      font-weight: 500
+      font-size: 22px
+      line-height: 22px
+      color: #fff
+      background-color: transparent
+      border-radius: 10px
+      border: 1px solid #fff
+      margin-bottom: 30px 
+      &:hover
+        background-color: #fff
+        color: #200039
+        transition: all 0.3s linear
+  &__input_file
+    width: 320px
+    height: 320px
+    opacity: 0
+    z-index: 5
+    position: absolute
+    top: 0
+    left: 0
+    cursor: pointer
+    &__common
+      width: 320px
+      height: 320px
+      position: relative
+    &__plus
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 4
+      width: 320px
+      height: 320px
+      background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%)
+      border: 1px solid #FFFFFF
+      display: flex
+      justify-content: center
+      align-items: center
+      div
+        position: relative
+        width: 50px
+        height: 50px
+  &__changeBtn
+    position: relative
+    width: 30px
+    height: 30px
+    align-self: flex-start
+    background-color: transparent
+    cursor: pointer
+    border: none
+    margin-left: 10px
+  &__fileInput
+    width: 420px
+    height: 420px
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%)
+    border: 1px solid #FFFFFF
+  &__textInput
+    width: 800px
+    height: 50px
+    font-weight: 500
+    font-size: 18px
+    line-height: 22px
+    background-color: #fff
+    border-radius: 10px
+    border: none
+    padding: 15px
+    &:focus, &:active, &:hover
+      outline: none
+    &::placeholder
+      opacity: 70%
+  &__chars
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    column-gap: 30px
+    margin-bottom: 15px
+    &:first-child
+      button
+        display: none
+  &__charInput
+    width: 350px
+    height: 50px
+    font-weight: 500
+    font-size: 18px
+    line-height: 22px
+    background-color: #fff
+    border-radius: 10px
+    border: none
+    padding: 15px
+    &:focus, &:active, &:hover
+      outline: none
+    &::placeholder
+      opacity: 70%
+  &__charDelete
+    position: relative
+    width: 30px
+    height: 30px
+    background-color: transparent
+    border: none
+    cursor: pointer
+  &__charAdd
+    max-width: 350px
+    padding: 15px 30px
+    width: 100%
+    font-style: normal
+    font-weight: 500
+    font-size: 22px
+    line-height: 22px
+    color: #fff
+    background-color: transparent
+    border-radius: 10px
+    border: 1px solid #fff
+    margin-top: 15px
+    &:hover
+      background-color: #fff
+      color: #200039
+      transition: all 0.3s linear
+  &__textareaInput
+    width: 800px
+    height: 150px
+    font-weight: 500
+    font-size: 18px
+    line-height: 22px
+    background-color: #fff
+    border-radius: 10px
+    border: none
+    padding: 15px
+    &:focus, &:active, &:hover
+      outline: none
+  &__radioItems
+    margin-top: -10px
+    display: flex
+    column-gap: 15px
+    flex-direction: column
+.addColor
+  max-width: 320px
+  padding: 15px 30px
+  width: 100%
+  font-style: normal
+  font-weight: 500
+  font-size: 22px
+  line-height: 22px
+  color: #fff
+  background-color: transparent
+  border-radius: 10px
+  border: 1px solid #fff
+  margin-bottom: 80px
+  &:hover
+    background-color: #fff
+    color: #200039
+    transition: all 0.3s linear
+.deleteColor
+  max-width: 320px
+  padding: 15px 30px
+  width: 100%
+  font-style: normal
+  font-weight: 500
+  font-size: 22px
+  line-height: 22px
+  color: #fff
+  background-color: transparent
+  border-radius: 10px
+  border: 1px solid #fff
+  &:hover
+    background-color: #fff
+    color: #200039
+    transition: all 0.3s linear
+.label__radio
+  font-weight: 500
+  font-size: 18px
+  line-height: 20px
+  margin-bottom: 15px
+  position: relative
+  padding-left: 25px
+  color: #fff
+.input__radio
+  margin-right: 10px
+  position: absolute
+  top: 0
+  left: 0
+  width: 18px
+  height: 18px
+  &::before
+    content: ""
+    position: absolute
+    left: 0px
+    top: 0px
+    width: 18px
+    height: 18px
+    border-radius: 100%
+    background-color: #ffffff
+  &:checked::before
+    left: 0
+    top: 0
+    width: 10px
+    height: 10px
+    border-radius: 100%
+    border: 4px solid #FFFFFF
+    background-color: #200039
+
+.save__btn
+  max-width: 200px
+  padding: 15px 30px
+  width: 100%
+  font-style: normal
+  font-weight: 500
+  font-size: 22px
+  line-height: 22px
+  color: #fff
+  background-color: transparent
+  border-radius: 10px
+  border: 1px solid #fff
+  &:hover
+    background-color: #fff
+    color: #200039
+    transition: all 0.3s linear
+
+.flex
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  gap: 30px
+.flex2
+  display: flex
+  justify-content: start
+  align-items: center
+  gap: 15px
+  flex-wrap: wrap
+  max-width: 800px
+.flex3
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  gap: 15px

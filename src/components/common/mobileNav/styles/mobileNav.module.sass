@@ -1,0 +1,89 @@
+@import ../../../../../public/assets/styles/variables/fonts
+
+.nav
+  position: absolute
+  top: 0
+  left: 0
+  display: none
+  opacity: 0
+  transition: all ease .3s
+  @media (max-width: 1170px)
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    padding: 150px 40px 50px 70px
+    background: rgba(0, 0, 0, 0.95)
+    height: 100vh
+    z-index: -1
+  @media (max-width: 600px)
+    width: 100%
+  @media (max-width: 480px)
+    padding: 120px 40px 50px 50px
+
+.active
+  animation: visible .3s ease-in-out forwards
+  z-index: 7
+.inactive
+  animation: hidden .3s ease-in-out forwards
+  z-index: -1
+
+.nav__title
+  font-family: $georgia
+  font-size: 26px
+  font-weight: 600
+  color: #fff
+  display: block
+  position: absolute
+  top: 35px
+  left: 70px
+  @media (max-width: 480px)
+    left: 50px
+
+.nav__menu
+  display: flex
+  color: #fff
+  list-style: none
+  flex-direction: column
+  align-items: flex-start
+  font-weight: 500
+  font-size: 28px
+  line-height: 32px
+  row-gap: 20px
+  @media (max-width: 480px)
+    font-size: 22px
+    line-height: 28px
+    row-gap: 15px
+
+.nav__menu__link, .nav__menu__item
+  padding: 20px 0
+
+.cross
+  display: block
+  position: absolute
+  top: 30px
+  right: 40px
+
+.cross__relative
+  position: relative
+  width: 40px
+  height: 40px
+
+.nav__inst
+  margin-top: 20px
+  position: relative
+  width: 60px
+  height: 60px
+
+@keyframes visible
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes hidden
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+    z-index: -10

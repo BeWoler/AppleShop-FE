@@ -1,0 +1,102 @@
+.changeDelivery
+  &__container
+    padding: 100px 0
+    h1
+      font-weight: 600
+      font-size: 42px
+      line-height: 51px
+      margin-bottom: 50px
+  &__content
+    background-color: #200039
+    border-radius: 20px
+    padding: 50px
+    &__item
+      margin-bottom: 50px
+      h3
+        font-weight: 600
+        font-size: 22px
+        line-height: 27px
+        margin-bottom: 25px
+        color: #fff
+  &__radioItems
+    margin-top: -10px
+    display: flex
+    column-gap: 15px
+    flex-direction: column
+  &__textInput
+    width: 800px
+    height: 50px
+    font-weight: 500
+    font-size: 18px
+    line-height: 22px
+    background-color: #fff
+    border-radius: 10px
+    border: none
+    padding: 15px
+    &:focus, &:active, &:hover
+      outline: none
+    &::placeholder
+      opacity: 70%
+  &__textareaInput
+    width: 800px
+    height: 150px
+    font-weight: 500
+    font-size: 18px
+    line-height: 22px
+    background-color: #fff
+    border-radius: 10px
+    border: none
+    padding: 15px
+    &:focus, &:active, &:hover
+      outline: none
+    &::placeholder
+      opacity: 70%
+.save__btn
+  max-width: 200px
+  padding: 15px 30px
+  width: 100%
+  font-style: normal
+  font-weight: 500
+  font-size: 22px
+  line-height: 22px
+  color: #fff
+  background-color: transparent
+  border-radius: 10px
+  border: 1px solid #fff
+  &:hover
+    background-color: #fff
+    color: #200039
+    transition: all 0.3s linear
+
+.label__radio
+  font-weight: 500
+  font-size: 18px
+  line-height: 20px
+  margin-bottom: 15px
+  position: relative
+  padding-left: 25px
+  color: #fff
+.input__radio
+  margin-right: 10px
+  position: absolute
+  top: 0
+  left: 0
+  width: 18px
+  height: 18px
+  &::before
+    content: ""
+    position: absolute
+    left: 0px
+    top: 0px
+    width: 18px
+    height: 18px
+    border-radius: 100%
+    background-color: #ffffff
+  &:checked::before
+    left: 0
+    top: 0
+    width: 10px
+    height: 10px
+    border-radius: 100%
+    border: 4px solid #FFFFFF
+    background-color: #200039

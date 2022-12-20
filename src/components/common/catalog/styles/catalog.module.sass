@@ -1,0 +1,73 @@
+.catalog
+  background-color: #200039
+
+.catalog__container
+  padding: 140px 20px 140px 20px
+  color: #fff
+  text-align: center
+  @media (max-width: 1700px ) 
+    padding: 120px 50px 140px 
+  @media (max-width: 900px )
+    padding: 100px 50px 120px 
+  @media (max-width: 600px )
+    padding: 90px 30px 100px 
+  @media (max-width: 450px )
+    padding: 70px 15px 80px 
+
+.catalog__selections
+  margin: 0 auto 95px auto
+  max-width: 1440px
+  @media (max-width: 900px )
+    margin-bottom: 75px
+  @media (max-width: 600px )
+    margin-bottom: 60px
+  @media (max-width: 450px )
+    margin-bottom: 50px
+
+.catalog__selection_btn
+  width: calc( 100% / 3  )
+  padding: 15px 30px
+  border: 1.5px solid #FFFFFF
+  background-color: transparent
+  font-weight: 500
+  font-size: 22px
+  line-height: 27px
+  color: #fff
+  &:first-child
+    border-top-left-radius: 20px
+    border-bottom-left-radius: 20px
+    @media (max-width: 600px )
+      width: 100%
+      border-radius: 20px
+      margin-bottom: 20px
+  &:last-child
+    border-top-right-radius: 20px
+    border-bottom-right-radius: 20px
+  &:hover, &:focus
+    background-color: #fff
+    color: #200039
+    transition: all 0.3s linear
+  @media (max-width: 1700px ) 
+    font-size: 18px
+    line-height: 22px
+  @media (max-width: 600px )
+    width: 50%
+  &:nth-child(2)
+    @media (max-width: 600px )
+      border-top-left-radius: 20px
+      border-bottom-left-radius: 20px
+
+
+.catalog__list
+  max-width: 1400px
+  display: flex
+  column-gap: 90px
+  row-gap: 100px
+  align-items: stretch
+  justify-content: center
+  flex-wrap: wrap
+  margin: 0 auto
+  @media (max-width: 900px )
+    row-gap: 70px
+  @media (max-width: 600px )
+    row-gap: 60px

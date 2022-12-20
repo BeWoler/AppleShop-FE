@@ -1,0 +1,77 @@
+.erroePage
+  background: linear-gradient(102.39deg, #030303 0%, #240041 100%)
+  color: #fff
+  height: 100vh
+  display: flex
+  &__container
+    height: 100%
+    width: 100%
+    padding: 200px 100px 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    @media (max-width: 700px )
+      padding: 150px 50px 0
+    @media (max-width: 450px )
+      padding: 135px 20px 0
+    @media (max-width: 380px )
+      padding: 125px 10px 0
+  &__title
+    font-weight: 600
+    font-size: 48px
+    line-height: 50px
+    margin-bottom: 30px
+    @media (max-width: 700px )
+      font-size: 42px
+      line-height: 46px
+    @media (max-width: 700px )
+      font-size: 38px
+      line-height: 46px
+  &__subtitle
+    text-align: center
+    font-weight: 500
+    font-size: 28px
+    line-height: 32px
+    margin-bottom: 40px
+    @media (max-width: 700px )
+      font-size: 24px
+      line-height: 28px
+    @media (max-width: 450px )
+      font-size: 22px
+      line-height: 26px
+  &__img
+    height: 520px
+    width: 500px
+    position: relative
+    margin: auto auto 0 auto
+    @media (max-width: 700px )
+      height: 350px
+      width: 364px
+    @media (max-width: 450px )
+      height: 300px
+      width: 312px
+  &__btn
+    cursor: pointer
+    color: #fff
+    background-color: transparent
+    border: none
+    font-weight: 500
+    font-size: 24px
+    line-height: 27px
+    padding: 25px 0
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      bottom: 10px
+      left: 50%
+      width: 0%
+      height: 1px
+      background-color: transparent
+      transition: all .2s ease-out
+    &:hover
+      &::after
+        left: 0
+        width: 100%
+        background-color: #fff

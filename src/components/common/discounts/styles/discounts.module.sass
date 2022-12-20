@@ -1,0 +1,125 @@
+@import ../../../../../public/assets/styles/variables/fonts
+
+.discounts
+  background-color: #520092
+  position: relative
+  z-index: 1
+  &::after
+    content: ""
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background-color: #000
+    opacity: 90%
+    z-index: 3
+
+.discounts__container
+  padding: 75px 20px
+  position: relative
+  overflow: hidden
+  &:nth-child(2n + 1) .discounts__watches__underwrap
+    display: none
+  &:nth-child(2n) .discounts__airpods3__underwrap
+    display: none
+  &:nth-child(2n) .discounts__airpodsPro__underwrap
+    display: none
+  @media (max-width: 650px ) 
+    padding: 55px 20px
+  @media (max-width: 500px ) 
+    padding: 40px 30px
+
+.discounts__airpods3__underwrap
+  position: absolute
+  left: 70px
+  bottom: 0
+  z-index: 2
+  @media (max-width: 1170px ) 
+    left: 30px
+  @media (max-width: 900px ) 
+    left: -10px
+  @media (max-width: 650px ) 
+    display: none
+
+.discounts__airpodsPro__underwrap
+  position: absolute
+  top: 30px
+  right: 200px
+  z-index: 2
+  @media (max-width: 1170px ) 
+    right: 100px
+  @media (max-width: 900px ) 
+    right: 10px
+  @media (max-width: 650px ) 
+    right: 200px
+  @media (max-width: 550px ) 
+    right: 150px
+  @media (max-width: 500px ) 
+    right: 100px
+  @media (max-width: 400px ) 
+    right: 30px
+
+.discounts__watches__underwrap
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  top: 17%
+  z-index: 2
+  width: 100%
+  overflow: hidden
+
+.discounts__airpods3__wrap
+  position: relative
+  height: 150px
+  width: 529px
+
+.discounts__airpodsPro__wrap
+  position: relative
+  height: 209px
+  width: 277px
+
+
+.discounts__watches__wrap
+  position: relative
+  height: 199px
+  width: 1755px
+
+.discounts__content
+  position: relative
+  color: #fff
+  text-align: center
+  max-width: 600px
+  width: 100%
+  margin: 0 auto
+  z-index: 4
+
+.discounts__content__date
+  font-weight: 500
+  font-size: 18px
+  line-height: 22px
+  position: relative
+  margin-bottom: 30px
+  @media (max-width: 600px ) 
+    font-size: 20px
+    line-height: 24px
+  &::after
+    content: ""
+    display: block
+    position: absolute
+    height: 1px
+    width: 100%
+    background-color: #fff
+    top: 37px
+
+.discounts__content__text
+  font-weight: 500
+  font-size: 24px
+  line-height: 28px
+  @media (max-width: 900px ) 
+    font-size: 22px
+    line-height: 28px
+  @media (max-width: 600px ) 
+    font-size: 18px
+    line-height: 22px

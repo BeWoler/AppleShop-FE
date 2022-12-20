@@ -1,0 +1,68 @@
+.header
+  z-index: 5
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.5) 100%)
+  position: fixed
+  height: fit-content
+  width: 100%
+  @media (max-width: 1770px )
+    height: fit-content
+
+.header__container
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-around
+  @media (max-width: 1770px )
+    padding: 20px 100px
+  @media (max-width: 1550px )
+    padding: 20px 70px
+  @media (max-width: 900px )
+    padding: 15px 30px
+  @media (max-width: 600px )
+    padding: 15px 20px
+
+.header__logo
+  width: 40px
+  height: 40px
+  position: relative
+  cursor: pointer
+  @media (max-width: 600px )
+    width: 35px
+    height: 35px
+
+.header__container_svg
+  display: flex
+  column-gap: 100px
+  align-items: center
+  @media (max-width: 1440px )
+    column-gap: 50px
+
+.header__inst
+  position: relative
+  width: 40px
+  height: 40px
+  cursor: pointer
+  @media (max-width: 900px )
+    display: none
+
+.header__cart
+  position: relative
+  width: 40px
+  height: 40px
+  cursor: pointer
+  background-color: transparent
+  border: none
+  @media (max-width: 600px )
+    width: 35px
+    height: 35px
+
+.header__icon_menu
+  position: relative
+  width: 30px
+  height: 30px
+  display: none
+  @media (max-width: 1170px )
+    display: block
+  @media (max-width: 600px )
+    width: 30px
+    height: 30px
