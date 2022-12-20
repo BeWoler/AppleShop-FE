@@ -1,19 +1,17 @@
 .header
-  position: relative
   z-index: 5
-  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.1) 100%)
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.5) 100%)
   position: fixed
-  height: 100px
+  height: fit-content
   width: 100%
   @media (max-width: 1770px )
     height: fit-content
-  
+
 .header__container
   position: relative
-  padding: 20px 140px
   display: flex
   align-items: center
-  justify-content: space-between
+  justify-content: space-around
   @media (max-width: 1770px )
     padding: 20px 100px
   @media (max-width: 1550px )
@@ -23,9 +21,9 @@
   @media (max-width: 600px )
     padding: 15px 20px
 
-.header__logo 
-  width: 50px
-  height: 50px
+.header__logo
+  width: 40px
+  height: 40px
   position: relative
   cursor: pointer
   @media (max-width: 600px )
@@ -41,16 +39,16 @@
 
 .header__inst
   position: relative
-  width: 50px
-  height: 50px
+  width: 40px
+  height: 40px
   cursor: pointer
   @media (max-width: 900px )
     display: none
 
 .header__cart
   position: relative
-  width: 50px
-  height: 50px
+  width: 40px
+  height: 40px
   cursor: pointer
   background-color: transparent
   border: none
@@ -58,13 +56,13 @@
     width: 35px
     height: 35px
 
-.header__icom_menu
+.header__icon_menu
   position: relative
-  width: 46px
+  width: 30px
   height: 30px
   display: none
   @media (max-width: 1170px )
     display: block
   @media (max-width: 600px )
-    width: 34.5px
-    height: 22.5px
+    width: 30px
+    height: 30px

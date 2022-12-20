@@ -19,24 +19,29 @@
   align-items: center
   column-gap: 100px
   font-weight: 500
-  font-size: 18px
+  font-size: 16px
   line-height: 22px
   color: #fff
   @media (max-width: 1440px )
     column-gap: 70px
 
-.nav__menu__link, .nav__menu__item
+.nav__menu__item
   padding: 20px 0
   position: relative
+
+.nav__menu__link
+  transition: all .3s ease-out
   &::after
     content: ''
     position: absolute
-    bottom: 10px
+    bottom: 0px
     left: 50%
     width: 0%
-    height: 1px
+    height: 4px
+    border-top-right-radius: 100px
+    border-top-left-radius: 100px
     background-color: transparent
-    transition: all .2s ease-out
+    transition: all .3s ease-out
   &:hover
     &::after
       left: 0

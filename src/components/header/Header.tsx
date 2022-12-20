@@ -16,35 +16,35 @@ const Header: FC = (): JSX.Element => {
         {isOpen ? (
           <div
             style={{ opacity: '0' }}
-            className={styles.header__icom_menu}
+            className={styles.header__icon_menu}
             onClick={() => setOpen(!isOpen)}
           >
             <Image src="/assets/icons/menu.svg" layout="fill" alt="меню" />
           </div>
         ) : (
           <div
-            className={styles.header__icom_menu}
+            className={styles.header__icon_menu}
             onClick={() => setOpen(!isOpen)}
           >
             <Image src="/assets/icons/menu.svg" layout="fill" alt="меню" />
           </div>
         )}
         <Link href='/'>
-        <a className={styles.header__logo}>
-          <Image
-            src="/assets/icons/apple-icon.svg"
-            layout="fill"  
-            alt="apple icon"
-          />
-        </a>
+          <a className={styles.header__logo}>
+            <Image
+              src="/assets/icons/apple-icon.svg"
+              layout="fill"
+              alt="apple icon"
+            />
+          </a>
         </Link>
-        <Nav/>
+        <Nav />
         <div className={styles.header__container_svg}>
           <div className={styles.header__inst}>
             <Link href="/yandex.ru">
               <a className={styles.header__inst__link}>
                 <Image
-                  src="/assets/icons/inst-icon.svg"
+                  src="/assets/icons/instagram-icon.svg"
                   layout="fill"
                   alt="instagram"
                 />
@@ -61,8 +61,8 @@ const Header: FC = (): JSX.Element => {
         </div>
       </div>
       <MobileNav isOpen={isOpen} setOpen={setOpen} />
-      {cartIsOpen?
-        <Basket cartIsOpen={cartIsOpen} setCartIsOpen={setCartIsOpen}/>
+      {cartIsOpen ?
+        <Basket cartIsOpen={cartIsOpen} setCartIsOpen={setCartIsOpen} />
         : null
       }
     </header>
